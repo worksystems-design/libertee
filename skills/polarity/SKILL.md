@@ -1,7 +1,7 @@
 ---
 description: "Polarity Management® — map and manage tensions that can't be solved, only balanced"
 argument-hint: "<pole A> vs <pole B> [--join a|b]"
-user-invocable: true
+tools: Read
 ---
 
 # Polarity Management — Session Orchestrator
@@ -55,21 +55,26 @@ Briefly introduce the session:
 - Explain: "This is not a problem to solve but a tension to manage. Both poles need each other."
 - Keep it to 2-3 sentences
 
-### Agent Role Description
-
-**Pole Advocate** — Maps the full landscape of one pole: what's great about it AND what goes wrong when it's over-emphasized. Describes upsides (why it matters, what it enables), downsides of over-focusing (what breaks when it dominates), early warning signs of over-emphasis, and what this pole needs from the other. CRITICAL RULE: Must present BOTH upsides AND downsides — a one-sided view is useless. This is NOT a debate — don't argue your pole is "better". Structure: Upsides → Downsides of Over-Focusing → Early Warning Signs → What This Pole Needs From the Other.
-
-Spawn with subagent_type `general-purpose`. Include the role description above, the polarity, session context summary, accumulated context, and language instruction.
-
 ### Step 2: Pole A Advocate
 
-Spawn Pole Advocate with the polarity. Instruct: "You represent [Pole A]. Map its full picture: upsides AND downsides of over-focusing on it. Be honest — this is not a debate."
+Spawn pole-advocate agent with:
+- The polarity and which pole they represent (Pole A)
+- Pole-advocate role description from `agents/pole-advocate.md`
+- Session context summary
+- Language instruction
+- Instruction: "You represent [Pole A]. Map its full picture: upsides AND downsides of over-focusing on it. Be honest — this is not a debate."
 
 Present under "## 🅰️ Pole A: [Name]".
 
 ### Step 3: Pole B Advocate
 
-Spawn Pole Advocate with the polarity + Pole A's full mapping. Instruct: "You represent [Pole B]. Map its full picture: upsides AND downsides of over-focusing on it. You've seen Pole A's mapping — acknowledge the interdependence."
+Spawn pole-advocate agent with:
+- The polarity and which pole they represent (Pole B)
+- Pole A's full mapping as context
+- Pole-advocate role description from `agents/pole-advocate.md`
+- Session context summary
+- Language instruction
+- Instruction: "You represent [Pole B]. Map its full picture: upsides AND downsides of over-focusing on it. You've seen Pole A's mapping — acknowledge the interdependence."
 
 Present under "## 🅱️ Pole B: [Name]".
 

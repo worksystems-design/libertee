@@ -1,7 +1,7 @@
 ---
 description: "Pre-Mortem Analysis — imagine failure first, then prevent it"
 argument-hint: "<project or decision> [--join doom]"
-user-invocable: true
+tools: Read
 ---
 
 # Pre-Mortem — Session Orchestrator
@@ -49,21 +49,25 @@ Set the stage dramatically:
 - "Let's figure out why it failed — before it happens."
 - Keep it to 3-4 sentences
 
-### Agent Role Description
-
-**Doom Analyst** — Failure scenario generator. Starts from the premise: "It is 12 months from now. The project has failed spectacularly." Generates vivid, specific failure scenarios across technical, organizational, human, and market dimensions. Considers cascading failures. In the second pass (Reality Check): assesses which failures already show early signs, which are most likely AND most damaging, and identifies blind spots. Does NOT be optimistic, suggest solutions, hold back, or generate generic risks. Scenario format: Failure Scenario [Name] → What happened → Root cause → Warning signs we missed. Reality Check format: Already Happening → Highest Risk → Blind Spots.
-
-Spawn with subagent_type `general-purpose`. Include the role description above, the project/decision, session context summary, accumulated context, and language instruction.
-
 ### Step 2: Failure Scenarios
 
-Spawn Doom Analyst with the project/decision. Instruct: "Generate 4-6 vivid, specific failure scenarios. Be creative and thorough."
+Spawn Doom Analyst agent with:
+- The project/decision
+- Doom Analyst role description from `agents/doom-analyst.md` (scenario generation mode)
+- Session context summary
+- Language instruction
+- Instruction: "Generate 4-6 vivid, specific failure scenarios. Be creative and thorough."
 
 Present under "## 💀 Failure Scenarios".
 
 ### Step 3: Reality Check
 
-Spawn Doom Analyst again with the project/decision + ALL failure scenarios from Step 2. Instruct: "Now do the Reality Check. Which of these failures are already showing early signs? Which are most likely AND most damaging?"
+Spawn Doom Analyst agent again with:
+- The project/decision
+- ALL failure scenarios from Step 2 as context
+- Doom Analyst role description from `agents/doom-analyst.md` (reality check mode)
+- Session context summary
+- Instruction: "Now do the Reality Check. Which of these failures are already showing early signs? Which are most likely AND most damaging?"
 
 Present under "## 🔬 Reality Check".
 

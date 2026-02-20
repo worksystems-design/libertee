@@ -1,5 +1,3 @@
-# Agent Definitions — Reference Only
+# Agent Definitions
 
-These files are the canonical role descriptions for each agent. They are **not read at runtime** — the orchestrator skills (`skills/*/SKILL.md`) have the agent descriptions inlined to avoid file-read permissions during sessions.
-
-If you modify an agent's role, update it here **and** in the corresponding SKILL.md.
+Each file defines the role, constraints, and output format for one agent perspective. The orchestrator skills (`skills/*/SKILL.md`) read these files at runtime when spawning agents.
