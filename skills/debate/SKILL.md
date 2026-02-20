@@ -79,11 +79,11 @@ Briefly introduce the debate:
 ### Step 2: Round 1 — Opening Statements
 
 **Pro Advocate** first:
-- Spawn agent with pro-advocate role from `pro-advocate.md`, the thesis, session context summary, and language instruction
+- Spawn agent with pro-advocate role from `agents/pro-advocate.md`, the thesis, session context summary, and language instruction
 - Collect response
 
 **Contra Advocate** second:
-- Spawn agent with contra-advocate role from `contra-advocate.md`, the thesis, Pro's opening statement, session context summary, and language instruction
+- Spawn agent with contra-advocate role from `agents/contra-advocate.md`, the thesis, Pro's opening statement, session context summary, and language instruction
 - Collect response
 
 Present both under a "## Round 1 — Opening Statements" header.

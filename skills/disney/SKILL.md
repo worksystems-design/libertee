@@ -53,7 +53,7 @@ Briefly introduce the session:
 
 Spawn Dreamer agent with:
 - The topic
-- Dreamer role description from `dreamer.md`
+- Dreamer role description from `agents/dreamer.md`
 - Session context summary
 - Language instruction
 
@@ -64,7 +64,7 @@ Present under "## 💭 The Dreamer's Vision".
 Spawn Realist agent with:
 - The topic
 - The Dreamer's full vision as context
-- Realist role description from `realist.md`
+- Realist role description from `agents/realist.md`
 - Session context summary
 - Instruction: "The Dreamer has painted a vision. Your job: make it real. Assume it IS possible."
 
@@ -75,7 +75,7 @@ Present under "## 📐 The Realist's Plan".
 Spawn Critic agent with:
 - The topic
 - The Dreamer's vision AND the Realist's plan as context
-- Critic role description from `critic.md`
+- Critic role description from `agents/critic.md`
 - Session context summary
 - Instruction: "The Dreamer dreamed, the Realist planned. Stress-test the plan. Be constructive."
 
