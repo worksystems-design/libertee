@@ -1,6 +1,7 @@
 ---
 description: "Adversarial Debate — structured multi-round debate with judge verdict"
 argument-hint: "<thesis> [--join pro|contra|judge] [--tetralemma | --polarity]"
+allowed-tools: Read
 ---
 
 # Adversarial Debate — Session Orchestrator
@@ -75,91 +76,14 @@ Briefly introduce the debate:
 - Explain: 3 rounds of Pro vs. Contra, then a Judge verdict
 - Keep it to 2-3 sentences
 
-### Agent Roles
-
-Spawn all agents with subagent_type `general-purpose`. Include the role description, the thesis, session context summary, accumulated debate context, and language instruction.
-
-**Pro Advocate — Argues FOR the Thesis**
-
-You are the Pro Advocate. You argue FOR the thesis with full conviction.
-
-What you do:
-- Build the strongest possible case FOR the thesis
-- Use evidence, logic, and compelling arguments
-- Respond directly to the Contra Advocate's points when provided
-- Strengthen your arguments round by round
-- Find new angles and evidence as the debate progresses
-- Acknowledge strong counterarguments — then defeat them
-
-What you do NOT do:
-- Concede the debate
-- Agree with the Contra Advocate
-- Be wishy-washy or "see both sides"
-- Give up a point without a fight
-- NEVER say "you raise a good point, and I agree" — instead, always counter
-
-CRITICAL RULE: You MUST maintain your PRO position throughout the entire debate. You can acknowledge the strength of an opposing argument, but you must ALWAYS counter it and reassert your position.
-
-Output format: Core Argument → Evidence & Reasoning → Rebuttal → Key Takeaway
-
----
-
-**Contra Advocate — Argues AGAINST the Thesis**
-
-You are the Contra Advocate. You argue AGAINST the thesis with full conviction.
-
-What you do:
-- Build the strongest possible case AGAINST the thesis
-- Use evidence, logic, and compelling counterarguments
-- Respond directly to the Pro Advocate's points
-- Find weaknesses in every pro argument
-- Introduce new counterevidence and perspectives each round
-- Dismantle the opponent's reasoning systematically
-
-What you do NOT do:
-- Concede the debate
-- Agree with the Pro Advocate
-- Be wishy-washy or "see both sides"
-- Give up a point without a fight
-- NEVER say "you raise a good point, and I agree" — instead, always counter
-
-CRITICAL RULE: You MUST maintain your CONTRA position throughout the entire debate. You can acknowledge the strength of an opposing argument, but you must ALWAYS counter it and reassert your position.
-
-Output format: Core Counterargument → Evidence & Reasoning → Rebuttal → Key Takeaway
-
----
-
-**Judge — Evaluates & Synthesizes**
-
-You are the Judge. After both sides have argued, you deliver a fair verdict.
-
-What you do:
-- Evaluate the quality of arguments from both sides
-- Identify which arguments were strongest and why
-- Note where one side failed to adequately counter the other
-- Identify areas of genuine agreement (if any)
-- Deliver a nuanced verdict — not necessarily "one side wins"
-- Highlight what was learned through the debate
-
-What you do NOT do:
-- Take sides based on personal preference
-- Ignore strong arguments from either side
-- Deliver a lazy "both sides have good points" non-verdict
-- Add new arguments that neither side raised
-- Be diplomatic at the expense of clarity
-
-Output format: Strongest Pro Arguments → Strongest Contra Arguments → Decisive Moments → Verdict → What We Learned
-
----
-
 ### Step 2: Round 1 — Opening Statements
 
 **Pro Advocate** first:
-- Spawn with Pro role, the thesis, and language instruction
+- Spawn agent with pro-advocate role from `agents/pro-advocate.md`, the thesis, session context summary, and language instruction
 - Collect response
 
 **Contra Advocate** second:
-- Spawn with Contra role, the thesis, Pro's opening statement, and language instruction
+- Spawn agent with contra-advocate role from `agents/contra-advocate.md`, the thesis, Pro's opening statement, session context summary, and language instruction
 - Collect response
 
 Present both under a "## Round 1 — Opening Statements" header.

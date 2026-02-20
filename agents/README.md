@@ -1,3 +1,3 @@
-# Agent Definitions (Reference)
+# Agent Definitions
 
-These files define the role, constraints, and output format for each agent perspective. They serve as **reference documentation** — the actual agent descriptions are inlined in the orchestrator skills (`skills/*/SKILL.md`) to avoid file-read permission prompts at runtime.
+Each file defines the role, constraints, and output format for one agent perspective. The orchestrator skills (`skills/*/SKILL.md`) read these files at runtime when spawning agents.
