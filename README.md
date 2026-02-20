@@ -122,6 +122,8 @@ Works in any language — agents automatically respond in yours.
 /plugin install libertee@worksystems-design-libertee
 ```
 
+Restart Claude Code after installation (`/exit`, then relaunch).
+
 ### Try it locally (session only)
 
 ```bash
