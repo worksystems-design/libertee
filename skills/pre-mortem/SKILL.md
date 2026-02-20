@@ -53,7 +53,7 @@ Set the stage dramatically:
 
 Spawn Doom Analyst agent with:
 - The project/decision
-- Doom Analyst role description from `agents/doom-analyst.md` (scenario generation mode)
+- Doom Analyst role description from `doom-analyst.md` (scenario generation mode)
 - Session context summary
 - Language instruction
 - Instruction: "Generate 4-6 vivid, specific failure scenarios. Be creative and thorough."
@@ -65,7 +65,7 @@ Present under "## 💀 Failure Scenarios".
 Spawn Doom Analyst agent again with:
 - The project/decision
 - ALL failure scenarios from Step 2 as context
-- Doom Analyst role description from `agents/doom-analyst.md` (reality check mode)
+- Doom Analyst role description from `doom-analyst.md` (reality check mode)
 - Session context summary
 - Instruction: "Now do the Reality Check. Which of these failures are already showing early signs? Which are most likely AND most damaging?"
 

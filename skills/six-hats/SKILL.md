@@ -107,7 +107,7 @@ Briefly introduce the session:
 For each hat in your chosen sequence, spawn an agent sequentially:
 
 - subagent_type: `general-purpose`
-- Prompt: Include the hat's role description from `agents/<hat>.md`, the topic, session context summary, ALL previous perspectives as accumulated context, and the detected language instruction
+- Prompt: Include the hat's role description from `<hat>.md`, the topic, session context summary, ALL previous perspectives as accumulated context, and the detected language instruction
 
 Each agent sees everything that came before. This accumulation is what makes each perspective richer than the last.
 

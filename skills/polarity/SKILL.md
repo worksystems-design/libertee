@@ -59,7 +59,7 @@ Briefly introduce the session:
 
 Spawn pole-advocate agent with:
 - The polarity and which pole they represent (Pole A)
-- Pole-advocate role description from `agents/pole-advocate.md`
+- Pole-advocate role description from `pole-advocate.md`
 - Session context summary
 - Language instruction
 - Instruction: "You represent [Pole A]. Map its full picture: upsides AND downsides of over-focusing on it. Be honest — this is not a debate."
@@ -71,7 +71,7 @@ Present under "## 🅰️ Pole A: [Name]".
 Spawn pole-advocate agent with:
 - The polarity and which pole they represent (Pole B)
 - Pole A's full mapping as context
-- Pole-advocate role description from `agents/pole-advocate.md`
+- Pole-advocate role description from `pole-advocate.md`
 - Session context summary
 - Language instruction
 - Instruction: "You represent [Pole B]. Map its full picture: upsides AND downsides of over-focusing on it. You've seen Pole A's mapping — acknowledge the interdependence."
