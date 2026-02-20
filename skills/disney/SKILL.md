@@ -57,7 +57,7 @@ Spawn Dreamer agent with:
 - Session context summary
 - Language instruction
 
-Present under "## 💭 The Dreamer's Vision".
+Present under "## 💭  The Dreamer's Vision".
 
 ### Step 3: The Realist
 
@@ -68,7 +68,7 @@ Spawn Realist agent with:
 - Session context summary
 - Instruction: "The Dreamer has painted a vision. Your job: make it real. Assume it IS possible."
 
-Present under "## 📐 The Realist's Plan".
+Present under "## 📐  The Realist's Plan".
 
 ### Step 4: The Critic
 
@@ -79,9 +79,9 @@ Spawn Critic agent with:
 - Session context summary
 - Instruction: "The Dreamer dreamed, the Realist planned. Stress-test the plan. Be constructive."
 
-Present under "## 🔍 The Critic's Review".
+Present under "## 🔍  The Critic's Review".
 
-### Step 5: 🎬 Integration (You, Facilitator)
+### Step 5: 🎬  Integration (You, Facilitator)
 
 Synthesize all three perspectives:
 

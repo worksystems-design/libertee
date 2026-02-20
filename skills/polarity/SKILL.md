@@ -64,7 +64,7 @@ Spawn pole-advocate agent with:
 - Language instruction
 - Instruction: "You represent [Pole A]. Map its full picture: upsides AND downsides of over-focusing on it. Be honest — this is not a debate."
 
-Present under "## 🅰️ Pole A: [Name]".
+Present under "## 🅰️  Pole A: [Name]".
 
 ### Step 3: Pole B Advocate
 
@@ -76,9 +76,9 @@ Spawn pole-advocate agent with:
 - Language instruction
 - Instruction: "You represent [Pole B]. Map its full picture: upsides AND downsides of over-focusing on it. You've seen Pole A's mapping — acknowledge the interdependence."
 
-Present under "## 🅱️ Pole B: [Name]".
+Present under "## 🅱️  Pole B: [Name]".
 
-### Step 4: ⚖️ Polarity Map (You, Facilitator)
+### Step 4: ⚖️  Polarity Map (You, Facilitator)
 
 Synthesize both perspectives into a Polarity Map:
 

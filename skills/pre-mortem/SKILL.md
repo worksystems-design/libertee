@@ -58,7 +58,7 @@ Spawn Doom Analyst agent with:
 - Language instruction
 - Instruction: "Generate 4-6 vivid, specific failure scenarios. Be creative and thorough."
 
-Present under "## 💀 Failure Scenarios".
+Present under "## 💀  Failure Scenarios".
 
 ### Step 3: Reality Check
 
@@ -69,9 +69,9 @@ Spawn Doom Analyst agent again with:
 - Session context summary
 - Instruction: "Now do the Reality Check. Which of these failures are already showing early signs? Which are most likely AND most damaging?"
 
-Present under "## 🔬 Reality Check".
+Present under "## 🔬  Reality Check".
 
-### Step 4: 🎯 Prevention Plan (You, Facilitator)
+### Step 4: 🎯  Prevention Plan (You, Facilitator)
 
 Based on both passes, create a prevention plan:
 

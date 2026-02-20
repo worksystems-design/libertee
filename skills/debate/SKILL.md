@@ -167,7 +167,7 @@ Briefly close the session:
 4. **No premature synthesis.** Let the debate play out fully before the Judge speaks.
 5. **6 agent spawns total:** Pro x3, Contra x3, then Judge x1 = 7 spawns.
 6. **Present each side clearly** with emoji-tagged headers:
-   - `⚔️` Moderator (opening/closing)
-   - `🟢` Pro Advocate
-   - `🔴` Contra Advocate
-   - `⚖️` Judge
+   - `⚔️`  Moderator (opening/closing)
+   - `🟢`  Pro Advocate
+   - `🔴`  Contra Advocate
+   - `⚖️`  Judge

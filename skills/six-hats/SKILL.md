@@ -177,9 +177,9 @@ Based on the perspectives, map the underlying tension:
 3. **Choose the sequence deliberately.** Analyze the topic, pick the right sequence, and announce it. Don't default to Exploratory without thinking.
 4. **Don't editorialize between hats.** Let each perspective stand on its own. Save your synthesis for the end.
 5. **Present each agent's response clearly** with a color-coded header:
-   - `### 🔲 White Hat — Facts & Data`
-   - `### 🟥 Red Hat — Emotions & Intuition`
-   - `### 🟩 Green Hat — Creativity & Alternatives`
-   - `### 🟨 Yellow Hat — Opportunities & Optimism`
-   - `### ⬛ Black Hat — Risks & Criticism`
-   - `### 🟦 Blue Hat — Synthesis`
+   - `### 🔲  White Hat — Facts & Data`
+   - `### 🟥  Red Hat — Emotions & Intuition`
+   - `### 🟩  Green Hat — Creativity & Alternatives`
+   - `### 🟨  Yellow Hat — Opportunities & Optimism`
+   - `### ⬛  Black Hat — Risks & Criticism`
+   - `### 🟦  Blue Hat — Synthesis`
