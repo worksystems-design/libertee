@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" font-family="Inter, -apple-system, system-ui, sans-serif">
+  <defs>
+    <style>
+      .agent-name { font-size: 11px; font-weight: 600; fill: white; }
+      .agent-role { font-size: 9px; fill: rgba(255,255,255,0.8); }
+      .facilitator-name { font-size: 11px; font-weight: 600; }
+      .facilitator-role { font-size: 9px; }
+      .arrow { stroke: #d1d5db; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="180" rx="12" fill="#f9fafb" stroke="#e5e7eb"/>
+
+  <text x="25" y="30" font-size="15" font-weight="700" fill="#1a1a2e">🎩  Six Thinking Hats®</text>
+
+  <!-- Blue Hat (facilitator) -->
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="#3b82f6" opacity="0.15"/>
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="65" y="72" text-anchor="middle" class="facilitator-name" fill="#3b82f6">🟦 Blue Hat</text>
+  <text x="65" y="86" text-anchor="middle" class="facilitator-role" fill="#3b82f6">Facilitator</text>
+
+  <line x1="115" y1="75" x2="140" y2="75" class="arrow"/>
+
+  <!-- 5 Hats -->
+  <rect x="150" y="47" width="75" height="56" rx="8" fill="#6b7280"/>
+  <text x="187" y="72" text-anchor="middle" class="agent-name">🔲 White</text>
+  <text x="187" y="86" text-anchor="middle" class="agent-role">Facts &amp; Data</text>
+
+  <rect x="235" y="47" width="75" height="56" rx="8" fill="#dc2626"/>
+  <text x="272" y="72" text-anchor="middle" class="agent-name">🟥 Red</text>
+  <text x="272" y="86" text-anchor="middle" class="agent-role">Emotions</text>
+
+  <rect x="320" y="47" width="75" height="56" rx="8" fill="#16a34a"/>
+  <text x="357" y="72" text-anchor="middle" class="agent-name">🟩 Green</text>
+  <text x="357" y="86" text-anchor="middle" class="agent-role">Creativity</text>
+
+  <rect x="405" y="47" width="75" height="56" rx="8" fill="#ca8a04"/>
+  <text x="442" y="72" text-anchor="middle" class="agent-name">🟨 Yellow</text>
+  <text x="442" y="86" text-anchor="middle" class="agent-role">Optimism</text>
+
+  <rect x="490" y="47" width="75" height="56" rx="8" fill="#1f2937"/>
+  <text x="527" y="72" text-anchor="middle" class="agent-name">⬛ Black</text>
+  <text x="527" y="86" text-anchor="middle" class="agent-role">Risks</text>
+
+  <!-- Sequences -->
+  <text x="25" y="128" font-size="9" fill="#6b7280" font-weight="600">Exploratory</text>
+  <text x="90" y="128" font-size="9" fill="#9ca3af">W → R → G → Y → B</text>
+  <text x="25" y="144" font-size="9" fill="#6b7280" font-weight="600">Reactive</text>
+  <text x="90" y="144" font-size="9" fill="#9ca3af">B → W → R → G → Y</text>
+  <text x="25" y="160" font-size="9" fill="#6b7280" font-weight="600">Cautious</text>
+  <text x="90" y="160" font-size="9" fill="#9ca3af">W → Y → B → R → G</text>
+
+  <text x="300" y="144" font-size="9" fill="#9ca3af">Logic:  Binary · Tetralemma · Polarity</text>
+</svg>

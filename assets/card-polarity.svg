@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 165" font-family="Inter, -apple-system, system-ui, sans-serif">
+  <defs>
+    <style>
+      .agent-name { font-size: 11px; font-weight: 600; fill: white; }
+      .agent-role { font-size: 9px; fill: rgba(255,255,255,0.8); }
+      .facilitator-name { font-size: 11px; font-weight: 600; }
+      .facilitator-role { font-size: 9px; }
+      .arrow { stroke: #d1d5db; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="165" rx="12" fill="#f9fafb" stroke="#e5e7eb"/>
+
+  <text x="25" y="30" font-size="15" font-weight="700" fill="#1a1a2e">⚖️  Polarity Management®</text>
+
+  <!-- Facilitator -->
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="#7c3aed" opacity="0.15"/>
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="65" y="72" text-anchor="middle" class="facilitator-name" fill="#6d28d9">⚖️ Facilitator</text>
+  <text x="65" y="86" text-anchor="middle" class="facilitator-role" fill="#6d28d9">Maps tension</text>
+
+  <line x1="115" y1="68" x2="145" y2="68" class="arrow"/>
+  <line x1="115" y1="82" x2="145" y2="82" class="arrow"/>
+
+  <!-- Pole A -->
+  <rect x="155" y="47" width="110" height="56" rx="8" fill="#2563eb"/>
+  <text x="210" y="72" text-anchor="middle" class="agent-name">🅰️ Pole A</text>
+  <text x="210" y="86" text-anchor="middle" class="agent-role">Upsides + Downsides</text>
+
+  <!-- ↔ -->
+  <text x="300" y="80" text-anchor="middle" font-size="20" fill="#9ca3af">↔</text>
+
+  <!-- Pole B -->
+  <rect x="335" y="47" width="110" height="56" rx="8" fill="#dc2626"/>
+  <text x="390" y="72" text-anchor="middle" class="agent-name">🅱️ Pole B</text>
+  <text x="390" y="86" text-anchor="middle" class="agent-role">Upsides + Downsides</text>
+
+  <!-- Polarity Map output -->
+  <rect x="475" y="50" width="105" height="45" rx="6" fill="#f3f4f6" stroke="#e5e7eb"/>
+  <text x="527" y="69" text-anchor="middle" font-size="9" font-weight="600" fill="#374151">Polarity Map®</text>
+  <text x="527" y="83" text-anchor="middle" font-size="8" fill="#9ca3af">Virtuous · Vicious</text>
+
+  <!-- Footer -->
+  <text x="25" y="135" font-size="9" fill="#9ca3af">Not a debate. Both poles are necessary.</text>
+  <text x="25" y="150" font-size="9" fill="#9ca3af">Not vs. — but AND</text>
+</svg>

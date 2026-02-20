@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" font-family="Inter, -apple-system, system-ui, sans-serif">
+  <defs>
+    <style>
+      .agent-name { font-size: 11px; font-weight: 600; fill: white; }
+      .agent-role { font-size: 9px; fill: rgba(255,255,255,0.8); }
+      .facilitator-name { font-size: 11px; font-weight: 600; }
+      .facilitator-role { font-size: 9px; }
+      .arrow { stroke: #d1d5db; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="160" rx="12" fill="#f9fafb" stroke="#e5e7eb"/>
+
+  <text x="25" y="30" font-size="15" font-weight="700" fill="#1a1a2e">⚔️  Adversarial Debate</text>
+
+  <!-- Moderator -->
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="#6b7280" opacity="0.15"/>
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="65" y="72" text-anchor="middle" class="facilitator-name" fill="#374151">⚔️ Moderator</text>
+  <text x="65" y="86" text-anchor="middle" class="facilitator-role" fill="#6b7280">Neutral</text>
+
+  <line x1="115" y1="68" x2="145" y2="60" class="arrow"/>
+  <line x1="115" y1="82" x2="145" y2="90" class="arrow"/>
+
+  <!-- Pro -->
+  <rect x="155" y="38" width="100" height="50" rx="8" fill="#16a34a"/>
+  <text x="205" y="60" text-anchor="middle" class="agent-name">🟢 Pro Advocate</text>
+  <text x="205" y="74" text-anchor="middle" class="agent-role">Argues FOR</text>
+
+  <!-- VS -->
+  <text x="280" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#9ca3af">⚡</text>
+
+  <!-- Contra -->
+  <rect x="300" y="38" width="100" height="50" rx="8" fill="#dc2626"/>
+  <text x="350" y="60" text-anchor="middle" class="agent-name">🔴 Contra Advocate</text>
+  <text x="350" y="74" text-anchor="middle" class="agent-role">Argues AGAINST</text>
+
+  <!-- 3 rounds -->
+  <text x="280" y="108" text-anchor="middle" font-size="10" fill="#9ca3af">3 rounds</text>
+
+  <!-- Arrow to Judge -->
+  <line x1="410" y1="63" x2="445" y2="63" class="arrow"/>
+
+  <!-- Judge -->
+  <rect x="455" y="38" width="100" height="50" rx="8" fill="#7c3aed"/>
+  <text x="505" y="60" text-anchor="middle" class="agent-name">⚖️ Judge</text>
+  <text x="505" y="74" text-anchor="middle" class="agent-role">Verdict</text>
+
+  <!-- Footer -->
+  <text x="25" y="140" font-size="9" fill="#9ca3af">Logic:  Binary · Tetralemma · Polarity</text>
+  <text x="300" y="140" font-size="9" fill="#9ca3af">Rule: Pro and Contra must NEVER agree</text>
+</svg>

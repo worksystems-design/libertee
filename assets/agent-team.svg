@@ -1,0 +1,237 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" font-family="Inter, -apple-system, system-ui, sans-serif">
+  <defs>
+    <style>
+      .title { font-size: 28px; font-weight: 700; fill: #1a1a2e; }
+      .subtitle { font-size: 14px; fill: #6b7280; font-weight: 400; }
+      .method-label { font-size: 15px; font-weight: 700; fill: #1a1a2e; }
+      .agent-name { font-size: 11px; font-weight: 600; fill: white; }
+      .agent-role { font-size: 9px; fill: rgba(255,255,255,0.8); }
+      .facilitator-name { font-size: 11px; font-weight: 600; fill: #374151; }
+      .facilitator-role { font-size: 9px; fill: #6b7280; }
+      .arrow { stroke: #d1d5db; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .vs-text { font-size: 12px; font-weight: 700; fill: #9ca3af; }
+      .footer { font-size: 13px; fill: #6b7280; }
+      .footer-bold { font-size: 13px; fill: #374151; font-weight: 600; }
+      .method-bg { fill: #f9fafb; rx: 12; }
+      .method-border { fill: none; stroke: #e5e7eb; stroke-width: 1; rx: 12; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="820" fill="white"/>
+
+  <!-- Title -->
+  <text x="600" y="48" text-anchor="middle" class="title">The Libertee Agent Team</text>
+  <text x="600" y="72" text-anchor="middle" class="subtitle">Structured thinking methods as multi-agent sessions for Claude Code</text>
+
+  <!-- ═══════ ROW 1: Six Hats + Debate ═══════ -->
+
+  <!-- Six Thinking Hats -->
+  <rect x="30" y="100" width="585" height="200" class="method-bg"/>
+  <rect x="30" y="100" width="585" height="200" class="method-border"/>
+  <text x="55" y="130" class="method-label">🎩  Six Thinking Hats®</text>
+
+  <!-- Blue Hat (facilitator) -->
+  <rect x="55" y="148" width="80" height="50" rx="8" fill="#3b82f6" opacity="0.15"/>
+  <rect x="55" y="148" width="80" height="50" rx="8" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="95" y="170" text-anchor="middle" class="facilitator-name" fill="#3b82f6">🟦 Blue Hat</text>
+  <text x="95" y="184" text-anchor="middle" class="facilitator-role" fill="#3b82f6">Facilitator</text>
+
+  <!-- Arrow from facilitator -->
+  <line x1="145" y1="173" x2="170" y2="173" class="arrow"/>
+
+  <!-- 5 Hat agents -->
+  <rect x="180" y="145" width="75" height="56" rx="8" fill="#6b7280"/>
+  <text x="217" y="170" text-anchor="middle" class="agent-name">🔲 White</text>
+  <text x="217" y="184" text-anchor="middle" class="agent-role">Facts &amp; Data</text>
+
+  <rect x="265" y="145" width="75" height="56" rx="8" fill="#dc2626"/>
+  <text x="302" y="170" text-anchor="middle" class="agent-name">🟥 Red</text>
+  <text x="302" y="184" text-anchor="middle" class="agent-role">Emotions</text>
+
+  <rect x="350" y="145" width="75" height="56" rx="8" fill="#16a34a"/>
+  <text x="387" y="170" text-anchor="middle" class="agent-name">🟩 Green</text>
+  <text x="387" y="184" text-anchor="middle" class="agent-role">Creativity</text>
+
+  <rect x="435" y="145" width="75" height="56" rx="8" fill="#ca8a04"/>
+  <text x="472" y="170" text-anchor="middle" class="agent-name">🟨 Yellow</text>
+  <text x="472" y="184" text-anchor="middle" class="agent-role">Optimism</text>
+
+  <rect x="520" y="145" width="75" height="56" rx="8" fill="#1f2937"/>
+  <text x="557" y="170" text-anchor="middle" class="agent-name">⬛ Black</text>
+  <text x="557" y="184" text-anchor="middle" class="agent-role">Risks</text>
+
+  <!-- Sequence labels — compact horizontal layout -->
+  <text x="55" y="222" font-size="9" fill="#9ca3af">Sequences:</text>
+  <text x="120" y="222" font-size="9" fill="#6b7280" font-weight="600">Exploratory</text>
+  <text x="194" y="222" font-size="9" fill="#9ca3af">W → R → G → Y → B</text>
+  <text x="120" y="238" font-size="9" fill="#6b7280" font-weight="600">Reactive</text>
+  <text x="194" y="238" font-size="9" fill="#9ca3af">B → W → R → G → Y</text>
+  <text x="120" y="254" font-size="9" fill="#6b7280" font-weight="600">Cautious</text>
+  <text x="194" y="254" font-size="9" fill="#9ca3af">W → Y → B → R → G</text>
+
+  <!-- Logic modes -->
+  <text x="400" y="238" font-size="9" fill="#9ca3af">Logic:  Binary · Tetralemma · Polarity</text>
+
+  <!-- Adversarial Debate -->
+  <rect x="625" y="100" width="545" height="200" class="method-bg"/>
+  <rect x="625" y="100" width="545" height="200" class="method-border"/>
+  <text x="650" y="130" class="method-label">⚔️  Adversarial Debate</text>
+
+  <!-- Moderator -->
+  <rect x="650" y="148" width="80" height="50" rx="8" fill="#6b7280" opacity="0.15"/>
+  <rect x="650" y="148" width="80" height="50" rx="8" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="690" y="170" text-anchor="middle" class="facilitator-name">⚔️ Moderator</text>
+  <text x="690" y="184" text-anchor="middle" class="facilitator-role">Neutral</text>
+
+  <line x1="740" y1="173" x2="765" y2="158" class="arrow"/>
+  <line x1="740" y1="173" x2="765" y2="188" class="arrow"/>
+
+  <!-- Pro -->
+  <rect x="775" y="138" width="90" height="50" rx="8" fill="#16a34a"/>
+  <text x="820" y="160" text-anchor="middle" class="agent-name">🟢 Pro</text>
+  <text x="820" y="174" text-anchor="middle" class="agent-role">Advocate</text>
+
+  <!-- VS -->
+  <text x="888" y="173" text-anchor="middle" class="vs-text">⚡</text>
+
+  <!-- Contra -->
+  <rect x="905" y="138" width="90" height="50" rx="8" fill="#dc2626"/>
+  <text x="950" y="160" text-anchor="middle" class="agent-name">🔴 Contra</text>
+  <text x="950" y="174" text-anchor="middle" class="agent-role">Advocate</text>
+
+  <!-- Rounds label -->
+  <text x="888" y="210" text-anchor="middle" font-size="10" fill="#9ca3af">3 rounds</text>
+
+  <!-- Judge -->
+  <rect x="1030" y="145" width="90" height="50" rx="8" fill="#7c3aed"/>
+  <text x="1075" y="167" text-anchor="middle" class="agent-name">⚖️ Judge</text>
+  <text x="1075" y="181" text-anchor="middle" class="agent-role">Verdict</text>
+
+  <line x1="995" y1="173" x2="1025" y2="173" class="arrow"/>
+
+  <!-- Logic modes -->
+  <text x="650" y="236" font-size="9" fill="#9ca3af">Logic modes:  Binary · Tetralemma · Polarity</text>
+  <text x="650" y="256" font-size="9" fill="#9ca3af">Rule: Pro and Contra must NEVER agree</text>
+
+  <!-- ═══════ ROW 2: Disney + Pre-Mortem + Polarity ═══════ -->
+
+  <!-- Disney -->
+  <rect x="30" y="330" width="370" height="200" class="method-bg"/>
+  <rect x="30" y="330" width="370" height="200" class="method-border"/>
+  <text x="55" y="360" class="method-label">🎬  Disney Creative Strategy</text>
+
+  <!-- Facilitator -->
+  <rect x="55" y="378" width="80" height="50" rx="8" fill="#f59e0b" opacity="0.15"/>
+  <rect x="55" y="378" width="80" height="50" rx="8" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="95" y="400" text-anchor="middle" class="facilitator-name" fill="#b45309">🎬 Facilitator</text>
+  <text x="95" y="414" text-anchor="middle" class="facilitator-role" fill="#b45309">Integrates</text>
+
+  <line x1="145" y1="403" x2="165" y2="403" class="arrow"/>
+
+  <!-- Dreamer -->
+  <rect x="175" y="375" width="80" height="56" rx="8" fill="#8b5cf6"/>
+  <text x="215" y="398" text-anchor="middle" class="agent-name">💭 Dreamer</text>
+  <text x="215" y="412" text-anchor="middle" class="agent-role">No limits</text>
+
+  <line x1="255" y1="403" x2="268" y2="403" class="arrow"/>
+
+  <!-- Realist -->
+  <rect x="278" y="375" width="80" height="56" rx="8" fill="#0891b2"/>
+  <text x="318" y="398" text-anchor="middle" class="agent-name">📐 Realist</text>
+  <text x="318" y="412" text-anchor="middle" class="agent-role">Make it real</text>
+
+  <!-- Critic below -->
+  <line x1="318" y1="431" x2="318" y2="448" class="arrow"/>
+
+  <rect x="278" y="455" width="80" height="56" rx="8" fill="#ea580c"/>
+  <text x="318" y="478" text-anchor="middle" class="agent-name">🔍 Critic</text>
+  <text x="318" y="492" text-anchor="middle" class="agent-role">Stress-test</text>
+
+  <text x="55" y="500" font-size="9" fill="#9ca3af">Critic tests the plan,</text>
+  <text x="55" y="515" font-size="9" fill="#9ca3af">not the dream</text>
+
+  <!-- Pre-Mortem -->
+  <rect x="420" y="330" width="350" height="200" class="method-bg"/>
+  <rect x="420" y="330" width="350" height="200" class="method-border"/>
+  <text x="445" y="360" class="method-label">🎯  Pre-Mortem Analysis</text>
+
+  <!-- Facilitator -->
+  <rect x="445" y="378" width="80" height="50" rx="8" fill="#dc2626" opacity="0.15"/>
+  <rect x="445" y="378" width="80" height="50" rx="8" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="485" y="400" text-anchor="middle" class="facilitator-name" fill="#b91c1c">🎯 Facilitator</text>
+  <text x="485" y="414" text-anchor="middle" class="facilitator-role" fill="#b91c1c">Prevents</text>
+
+  <line x1="535" y1="403" x2="555" y2="403" class="arrow"/>
+
+  <!-- Doom Analyst -->
+  <rect x="565" y="375" width="100" height="56" rx="8" fill="#1f2937"/>
+  <text x="615" y="398" text-anchor="middle" class="agent-name">💀 Doom Analyst</text>
+  <text x="615" y="412" text-anchor="middle" class="agent-role">Failure scenarios</text>
+
+  <!-- Pass 2 — simple down arrow -->
+  <line x1="615" y1="431" x2="615" y2="448" class="arrow"/>
+  <text x="660" y="445" font-size="9" fill="#9ca3af">× 2 passes</text>
+
+  <rect x="565" y="450" width="100" height="56" rx="8" fill="#374151"/>
+  <text x="615" y="473" text-anchor="middle" class="agent-name">🔬 Reality Check</text>
+  <text x="615" y="487" text-anchor="middle" class="agent-role">What's already true?</text>
+
+  <text x="445" y="500" font-size="9" fill="#9ca3af">"Imagine it failed.</text>
+  <text x="445" y="515" font-size="9" fill="#9ca3af"> Now tell me why."</text>
+
+  <!-- Polarity Management -->
+  <rect x="790" y="330" width="380" height="200" class="method-bg"/>
+  <rect x="790" y="330" width="380" height="200" class="method-border"/>
+  <text x="815" y="360" class="method-label">⚖️  Polarity Management®</text>
+
+  <!-- Facilitator -->
+  <rect x="815" y="378" width="80" height="50" rx="8" fill="#7c3aed" opacity="0.15"/>
+  <rect x="815" y="378" width="80" height="50" rx="8" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="855" y="400" text-anchor="middle" class="facilitator-name" fill="#6d28d9">⚖️ Facilitator</text>
+  <text x="855" y="414" text-anchor="middle" class="facilitator-role" fill="#6d28d9">Maps tension</text>
+
+  <line x1="905" y1="395" x2="925" y2="395" class="arrow"/>
+  <line x1="905" y1="411" x2="925" y2="411" class="arrow"/>
+
+  <!-- Pole A -->
+  <rect x="935" y="370" width="90" height="56" rx="8" fill="#2563eb"/>
+  <text x="980" y="393" text-anchor="middle" class="agent-name">🅰️ Pole A</text>
+  <text x="980" y="407" text-anchor="middle" class="agent-role">Ups + Downs</text>
+
+  <!-- ↔ -->
+  <text x="1055" y="403" text-anchor="middle" font-size="18" fill="#9ca3af">↔</text>
+
+  <!-- Pole B -->
+  <rect x="1075" y="370" width="90" height="56" rx="8" fill="#dc2626"/>
+  <text x="1120" y="393" text-anchor="middle" class="agent-name">🅱️ Pole B</text>
+  <text x="1120" y="407" text-anchor="middle" class="agent-role">Ups + Downs</text>
+
+  <text x="815" y="460" font-size="9" fill="#9ca3af">Not a debate. Both poles</text>
+  <text x="815" y="475" font-size="9" fill="#9ca3af">are necessary.</text>
+
+  <!-- Polarity Map output -->
+  <rect x="935" y="445" width="150" height="45" rx="6" fill="#f3f4f6" stroke="#e5e7eb"/>
+  <text x="1010" y="464" text-anchor="middle" font-size="9" font-weight="600" fill="#374151">Polarity Map®</text>
+  <text x="1010" y="478" text-anchor="middle" font-size="8" fill="#9ca3af">Virtuous · Vicious · Warning Signs</text>
+
+  <!-- ═══════ ROW 3: Join Mode + Footer ═══════ -->
+
+  <rect x="30" y="560" width="1140" height="80" rx="12" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="600" y="590" text-anchor="middle" font-size="14" font-weight="600" fill="#166534">👤  --join mode: Take a role yourself</text>
+  <text x="600" y="612" text-anchor="middle" font-size="11" fill="#4abb78">Bring your real emotions, domain knowledge, or conviction — the AI plays the other roles</text>
+  <text x="600" y="630" text-anchor="middle" font-size="10" fill="#6b7280">six-hats --join red  ·  debate --join pro  ·  disney --join dreamer  ·  pre-mortem --join doom  ·  polarity --join a</text>
+
+  <!-- Logic modes bar -->
+  <rect x="30" y="660" width="1140" height="55" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="600" y="685" text-anchor="middle" font-size="14" font-weight="600" fill="#1e40af">🔀  Logic Modes</text>
+  <text x="600" y="703" text-anchor="middle" font-size="11" fill="#3b82f6">Binary (pick a side)  ·  Tetralemma (the one · the other · both · neither · none of the above)  ·  Polarity (map the tension)</text>
+
+  <!-- Footer -->
+  <text x="600" y="760" text-anchor="middle" font-size="16" font-weight="600" fill="#1a1a2e">17 agents  ·  5 methods  ·  3 logic modes  ·  0 lines of code</text>
+  <text x="600" y="785" text-anchor="middle" font-size="12" fill="#9ca3af">Each agent exists only during its turn. Every perspective builds on the last. Pure Markdown, pure thinking.</text>
+  <text x="600" y="808" text-anchor="middle" font-size="11" fill="#9ca3af">github.com/worksystems-design/libertee</text>
+</svg>
