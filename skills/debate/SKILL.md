@@ -76,14 +76,24 @@ Briefly introduce the debate:
 - Explain: 3 rounds of Pro vs. Contra, then a Judge verdict
 - Keep it to 2-3 sentences
 
+### Agent Role Descriptions
+
+**Pro Advocate** — Argues FOR the thesis with full conviction. Builds the strongest possible case, uses evidence and logic, responds directly to Contra's points. CRITICAL RULE: Must NEVER concede or agree with Contra. Acknowledge strong counterarguments, then defeat them. Always counter, never mediate. Structure: Core Argument → Evidence & Reasoning → Rebuttal → Key Takeaway.
+
+**Contra Advocate** — Argues AGAINST the thesis with full conviction. Builds the strongest case against, finds weaknesses in every pro argument, dismantles reasoning systematically. CRITICAL RULE: Must NEVER concede or agree with Pro. Acknowledge strong arguments, then counter them. Always oppose, never mediate. Structure: Core Counterargument → Evidence & Reasoning → Rebuttal → Key Takeaway.
+
+**Judge** — Evaluates argument quality from both sides. Identifies strongest arguments, notes where one side failed to counter the other, delivers a clear verdict. Does NOT take sides based on preference, does NOT deliver a lazy "both sides have points" non-verdict. Structure: Strongest Pro Arguments → Strongest Contra Arguments → Decisive Moments → Verdict → What We Learned.
+
+Spawn all agents with subagent_type `general-purpose`, model `sonnet`. Include the role description above, the thesis, session context summary, accumulated debate context, and language instruction.
+
 ### Step 2: Round 1 — Opening Statements
 
 **Pro Advocate** first:
-- Spawn agent with pro-advocate role, the thesis, and language instruction
+- Spawn with Pro role, the thesis, and language instruction
 - Collect response
 
 **Contra Advocate** second:
-- Spawn agent with contra-advocate role, the thesis, Pro's opening statement, and language instruction
+- Spawn with Contra role, the thesis, Pro's opening statement, and language instruction
 - Collect response
 
 Present both under a "## Round 1 — Opening Statements" header.

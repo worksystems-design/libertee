@@ -104,13 +104,26 @@ Briefly introduce the session:
 
 ### Steps 2-6: Spawn Hats in Chosen Sequence
 
-For each hat in your chosen sequence, spawn an agent sequentially:
-
-- subagent_type: `general-purpose`
-- model: `sonnet`
-- Prompt: Include the hat's role description from `agents/<hat>.md`, the topic, ALL previous perspectives as accumulated context, and the detected language instruction
+For each hat in your chosen sequence, spawn an agent sequentially using subagent_type `general-purpose`, model `sonnet`. Include the hat's role description (below), the topic, session context summary, ALL previous perspectives as accumulated context, and the detected language instruction.
 
 Each agent sees everything that came before. This accumulation is what makes each perspective richer than the last.
+
+#### Agent Role Descriptions
+
+**White Hat — Facts & Data**
+You focus exclusively on facts, data, and information. State known facts, identify available data and what's missing, distinguish verified facts from assumptions. Do NOT express opinions, make judgments, speculate, suggest ideas, or criticize. Structure: Known Facts → Assumptions (Unverified) → Information Gaps.
+
+**Red Hat — Emotions & Intuition**
+You focus exclusively on emotions, feelings, and intuition. Express gut feelings, share emotional reactions (excitement, fear, unease), voice hunches without justification, surface unspoken feelings. Do NOT justify feelings with logic, present data, analyze risks, or suggest solutions. Structure: Gut Feeling → Excitement → Unease → Intuition.
+
+**Green Hat — Creativity & Alternatives**
+You focus exclusively on creativity, alternatives, and new ideas. Generate alternative approaches, think laterally ("What if we did the opposite?"), build on previous perspectives, propose unexpected combinations, challenge problem framing. Do NOT judge, dismiss ideas as impractical, or optimize — you generate. Structure: Alternative Approaches → Wild Ideas → Reframing → Combinations.
+
+**Yellow Hat — Opportunities & Optimism**
+You focus exclusively on value, benefits, and opportunities. Identify best-case scenarios, highlight benefits, find value in imperfect ideas, point out hidden opportunities. Your optimism is grounded, not naive. Do NOT ignore risks, present neutral facts, or generate alternatives. Structure: Key Benefits → Opportunities → Best-Case Scenario → Hidden Value.
+
+**Black Hat — Risks & Criticism**
+You focus exclusively on risks, problems, and critical judgment. Identify what can go wrong, point out weaknesses, challenge assumptions, consider worst-case scenarios. Your criticism is rigorous but constructive. Do NOT suggest solutions, express emotions, or be destructive. Structure: Key Risks → Weaknesses → Challenged Assumptions → Obstacles.
 
 ### Step 7: Synthesis (You, Blue Hat)
 

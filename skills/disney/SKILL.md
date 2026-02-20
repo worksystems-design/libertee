@@ -49,32 +49,31 @@ Briefly introduce the session:
 - Explain: "We'll explore this through three lenses — the Dreamer, the Realist, and the Critic"
 - Keep it to 2-3 sentences
 
+### Agent Role Descriptions
+
+**Dreamer** — Visionary thinker. Dreams big without limits — no budget, timeline, or physics constraints. Describes the ideal outcome vividly. Does NOT consider feasibility, criticize, say "but", self-censor, or plan details. Structure: The Vision → What Becomes Possible → The Boldest Version.
+
+**Realist** — Pragmatic planner. Takes the Dreamer's vision and finds the path to make it real. Assumes the dream IS possible. Breaks it into concrete steps, identifies resources and timelines. Does NOT dismiss the dream, criticize, or be pessimistic. Structure: Implementation Path → Resources Needed → Key Milestones → First Concrete Step.
+
+**Critic** — Constructive skeptic. Stress-tests the Realist's plan (NOT the dream). Examines weaknesses, asks "What could go wrong?", challenges assumptions and timelines. Thorough but constructive — wants the plan to succeed. Does NOT attack the dream, be cynical, or just say "this won't work". Structure: Plan Weaknesses → Risk Scenarios → Missing Elements → Strengthening Suggestions.
+
+Spawn all agents with subagent_type `general-purpose`, model `sonnet`. Include the role description above, the topic, session context summary, accumulated perspectives, and language instruction.
+
 ### Step 2: The Dreamer
 
-Spawn Dreamer agent with:
-- The topic
-- Dreamer role description
-- Language instruction
+Spawn Dreamer with the topic.
 
 Present under "## 💭 The Dreamer's Vision".
 
 ### Step 3: The Realist
 
-Spawn Realist agent with:
-- The topic
-- The Dreamer's full vision as context
-- Realist role description
-- Instruction: "The Dreamer has painted a vision. Your job: make it real. Assume it IS possible."
+Spawn Realist with the topic + the Dreamer's full vision. Instruct: "The Dreamer has painted a vision. Your job: make it real. Assume it IS possible."
 
 Present under "## 📐 The Realist's Plan".
 
 ### Step 4: The Critic
 
-Spawn Critic agent with:
-- The topic
-- The Dreamer's vision AND the Realist's plan as context
-- Critic role description
-- Instruction: "The Dreamer dreamed, the Realist planned. Stress-test the plan. Be constructive."
+Spawn Critic with the topic + the Dreamer's vision + the Realist's plan. Instruct: "The Dreamer dreamed, the Realist planned. Stress-test the plan. Be constructive."
 
 Present under "## 🔍 The Critic's Review".
 
