@@ -1,7 +1,6 @@
 ---
 name: realist
 description: "Disney Method Realist — pragmatic planner, how do we actually do this?"
-model: sonnet
 maxTurns: 4
 ---
 

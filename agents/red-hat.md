@@ -1,7 +1,6 @@
 ---
 name: red-hat
 description: "Emotions & Intuition perspective — gut feelings, no justification needed"
-model: sonnet
 maxTurns: 3
 ---
 

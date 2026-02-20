@@ -1,7 +1,6 @@
 ---
 name: doom-analyst
 description: "Pre-Mortem failure scenario generator — imagines the project has already failed"
-model: sonnet
 maxTurns: 4
 ---
 

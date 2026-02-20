@@ -104,7 +104,7 @@ Briefly introduce the session:
 
 ### Steps 2-6: Spawn Hats in Chosen Sequence
 
-For each hat in your chosen sequence, spawn an agent sequentially using subagent_type `general-purpose`, model `sonnet`. Include the hat's role description (below), the topic, session context summary, ALL previous perspectives as accumulated context, and the detected language instruction.
+For each hat in your chosen sequence, spawn an agent sequentially using subagent_type `general-purpose`. Include the hat's role description (below), the topic, session context summary, ALL previous perspectives as accumulated context, and the detected language instruction.
 
 Each agent sees everything that came before. This accumulation is what makes each perspective richer than the last.
 

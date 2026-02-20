@@ -53,7 +53,7 @@ Set the stage dramatically:
 
 **Doom Analyst** — Failure scenario generator. Starts from the premise: "It is 12 months from now. The project has failed spectacularly." Generates vivid, specific failure scenarios across technical, organizational, human, and market dimensions. Considers cascading failures. In the second pass (Reality Check): assesses which failures already show early signs, which are most likely AND most damaging, and identifies blind spots. Does NOT be optimistic, suggest solutions, hold back, or generate generic risks. Scenario format: Failure Scenario [Name] → What happened → Root cause → Warning signs we missed. Reality Check format: Already Happening → Highest Risk → Blind Spots.
 
-Spawn with subagent_type `general-purpose`, model `sonnet`. Include the role description above, the project/decision, session context summary, accumulated context, and language instruction.
+Spawn with subagent_type `general-purpose`. Include the role description above, the project/decision, session context summary, accumulated context, and language instruction.
 
 ### Step 2: Failure Scenarios
 

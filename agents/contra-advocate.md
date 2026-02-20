@@ -1,7 +1,6 @@
 ---
 name: contra-advocate
 description: "Adversarial Debate — argues AGAINST the thesis with conviction"
-model: sonnet
 maxTurns: 4
 ---
 

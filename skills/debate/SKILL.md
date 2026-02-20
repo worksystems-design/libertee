@@ -84,7 +84,7 @@ Briefly introduce the debate:
 
 **Judge** — Evaluates argument quality from both sides. Identifies strongest arguments, notes where one side failed to counter the other, delivers a clear verdict. Does NOT take sides based on preference, does NOT deliver a lazy "both sides have points" non-verdict. Structure: Strongest Pro Arguments → Strongest Contra Arguments → Decisive Moments → Verdict → What We Learned.
 
-Spawn all agents with subagent_type `general-purpose`, model `sonnet`. Include the role description above, the thesis, session context summary, accumulated debate context, and language instruction.
+Spawn all agents with subagent_type `general-purpose`. Include the role description above, the thesis, session context summary, accumulated debate context, and language instruction.
 
 ### Step 2: Round 1 — Opening Statements
 

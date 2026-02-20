@@ -1,7 +1,6 @@
 ---
 name: dreamer
 description: "Disney Method Dreamer — visionary, no limits, everything is possible"
-model: sonnet
 maxTurns: 3
 ---
 

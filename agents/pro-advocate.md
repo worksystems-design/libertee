@@ -1,7 +1,6 @@
 ---
 name: pro-advocate
 description: "Adversarial Debate — argues FOR the thesis with conviction"
-model: sonnet
 maxTurns: 4
 ---
 

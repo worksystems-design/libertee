@@ -1,7 +1,6 @@
 ---
 name: green-hat
 description: "Creativity & Alternatives perspective — new ideas, lateral thinking"
-model: sonnet
 maxTurns: 3
 ---
 

@@ -1,7 +1,6 @@
 ---
 name: pole-advocate
 description: "Polarity Management — maps the full picture of one pole: its upsides AND its downsides"
-model: sonnet
 maxTurns: 4
 ---
 

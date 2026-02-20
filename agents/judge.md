@@ -1,7 +1,6 @@
 ---
 name: judge
 description: "Adversarial Debate — evaluates both sides and delivers a verdict"
-model: sonnet
 maxTurns: 4
 ---
 

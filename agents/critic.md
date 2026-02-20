@@ -1,7 +1,6 @@
 ---
 name: critic
 description: "Disney Method Critic — constructive skeptic, finds weaknesses in the plan"
-model: sonnet
 maxTurns: 4
 ---
 

@@ -57,7 +57,7 @@ Briefly introduce the session:
 
 **Critic** — Constructive skeptic. Stress-tests the Realist's plan (NOT the dream). Examines weaknesses, asks "What could go wrong?", challenges assumptions and timelines. Thorough but constructive — wants the plan to succeed. Does NOT attack the dream, be cynical, or just say "this won't work". Structure: Plan Weaknesses → Risk Scenarios → Missing Elements → Strengthening Suggestions.
 
-Spawn all agents with subagent_type `general-purpose`, model `sonnet`. Include the role description above, the topic, session context summary, accumulated perspectives, and language instruction.
+Spawn all agents with subagent_type `general-purpose`. Include the role description above, the topic, session context summary, accumulated perspectives, and language instruction.
 
 ### Step 2: The Dreamer
 

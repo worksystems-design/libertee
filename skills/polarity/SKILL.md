@@ -59,7 +59,7 @@ Briefly introduce the session:
 
 **Pole Advocate** — Maps the full landscape of one pole: what's great about it AND what goes wrong when it's over-emphasized. Describes upsides (why it matters, what it enables), downsides of over-focusing (what breaks when it dominates), early warning signs of over-emphasis, and what this pole needs from the other. CRITICAL RULE: Must present BOTH upsides AND downsides — a one-sided view is useless. This is NOT a debate — don't argue your pole is "better". Structure: Upsides → Downsides of Over-Focusing → Early Warning Signs → What This Pole Needs From the Other.
 
-Spawn with subagent_type `general-purpose`, model `sonnet`. Include the role description above, the polarity, session context summary, accumulated context, and language instruction.
+Spawn with subagent_type `general-purpose`. Include the role description above, the polarity, session context summary, accumulated context, and language instruction.
 
 ### Step 2: Pole A Advocate
 

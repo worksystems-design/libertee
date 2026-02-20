@@ -1,7 +1,6 @@
 ---
 name: white-hat
 description: "Facts & Data perspective — what do we know, what don't we know?"
-model: sonnet
 maxTurns: 3
 ---
 

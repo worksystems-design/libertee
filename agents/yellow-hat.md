@@ -1,7 +1,6 @@
 ---
 name: yellow-hat
 description: "Opportunities & Optimism perspective — what's the value and potential?"
-model: sonnet
 maxTurns: 3
 ---
 

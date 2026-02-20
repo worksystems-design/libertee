@@ -1,7 +1,6 @@
 ---
 name: black-hat
 description: "Risks & Criticism perspective — what can go wrong?"
-model: sonnet
 maxTurns: 3
 ---
 
