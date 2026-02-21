@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" font-family="Inter, -apple-system, system-ui, sans-serif">
+  <defs>
+    <style>
+      .agent-name { font-size: 11px; font-weight: 600; fill: white; }
+      .agent-role { font-size: 9px; fill: rgba(255,255,255,0.8); }
+      .facilitator-name { font-size: 11px; font-weight: 600; }
+      .facilitator-role { font-size: 9px; }
+      .arrow { stroke: #d1d5db; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="180" rx="12" fill="#f9fafb" stroke="#e5e7eb"/>
+
+  <text x="25" y="30" font-size="15" font-weight="700" fill="#1a1a2e">🔺  Troika Consulting (Liberating Structures)</text>
+
+  <!-- Facilitator -->
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="#6366f1" opacity="0.15"/>
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="none" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="65" y="72" text-anchor="middle" class="facilitator-name" fill="#4f46e5">🔺 Facilitator</text>
+  <text x="65" y="86" text-anchor="middle" class="facilitator-role" fill="#4f46e5">Synthesizes</text>
+
+  <line x1="115" y1="75" x2="145" y2="75" class="arrow"/>
+
+  <!-- Client -->
+  <rect x="155" y="47" width="90" height="56" rx="8" fill="#0891b2"/>
+  <text x="200" y="72" text-anchor="middle" class="agent-name">🎯 Client</text>
+  <text x="200" y="86" text-anchor="middle" class="agent-role">Presents &amp; reflects</text>
+
+  <line x1="255" y1="75" x2="280" y2="75" class="arrow"/>
+
+  <!-- Consultant 1 -->
+  <rect x="290" y="47" width="110" height="56" rx="8" fill="#7c3aed"/>
+  <text x="345" y="72" text-anchor="middle" class="agent-name">1️⃣ Consultant 1</text>
+  <text x="345" y="86" text-anchor="middle" class="agent-role">Expert perspective</text>
+
+  <!-- Bidirectional between consultants -->
+  <text x="425" y="80" text-anchor="middle" font-size="18" fill="#9ca3af">⇄</text>
+
+  <!-- Consultant 2 -->
+  <rect x="450" y="47" width="110" height="56" rx="8" fill="#db2777"/>
+  <text x="505" y="72" text-anchor="middle" class="agent-name">2️⃣ Consultant 2</text>
+  <text x="505" y="86" text-anchor="middle" class="agent-role">Counter perspective</text>
+
+  <!-- Rounds -->
+  <text x="400" y="123" text-anchor="middle" font-size="10" fill="#9ca3af">2 rounds — consultants talk to EACH OTHER</text>
+
+  <!-- Footer -->
+  <text x="25" y="148" font-size="9" fill="#9ca3af" font-style="italic">Client listens while experts brainstorm their problem</text>
+  <text x="25" y="163" font-size="9" fill="#9ca3af">Present → Consult → Consult → Reflect → Synthesis</text>
+</svg>

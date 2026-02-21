@@ -2,7 +2,7 @@
 
 Structured thinking methods as multi-agent sessions for Claude Code.
 
-Facilitation techniques from the real world — Six Thinking Hats, Adversarial Debate, Disney Creative Strategy, Pre-Mortem Analysis, and Polarity Management — each powered by specialized AI agents that take on distinct roles and build on each other's insights.
+Facilitation techniques from the real world — Six Thinking Hats, Adversarial Debate, Disney Creative Strategy, Pre-Mortem Analysis, Polarity Management, TRIZ, W³, Troika Consulting, and Wise Crowds — each powered by specialized AI agents that take on distinct roles and build on each other's insights.
 
 No code. No build steps. Just Markdown files that orchestrate multi-agent thinking sessions.
 
@@ -68,11 +68,59 @@ Not every tension is a problem to solve. Some are polarities to manage — where
 
 ---
 
+### TRIZ (Liberating Structure)
+
+![TRIZ](assets/card-triz.svg)
+
+"What must we do to guarantee the worst possible outcome?" The Saboteur generates creative failure strategies with dark humor, then reality-checks which ones are already happening. Reverse brainstorming at its finest — sometimes the fastest way to improve is to stop making things worse.
+
+```bash
+/libertee:triz "Our sprint delivery reliability"
+```
+
+---
+
+### W³ — What? So What? Now What? (Liberating Structure)
+
+![W³](assets/card-w3.svg)
+
+Three phases, strictly separated. First: what actually happened? (facts only, no interpretation). Then: what does it mean? (patterns and implications). Finally: what do we do now? (concrete actions). The same Reflector agent runs all three phases — the discipline is in the separation. Most teams jump straight to "Now What?" and wonder why nothing changes.
+
+```bash
+/libertee:w3 "Our last product launch"
+```
+
+---
+
+### Troika Consulting (Liberating Structure)
+
+![Troika Consulting](assets/card-troika.svg)
+
+A Client presents a problem, then two Consultants brainstorm openly while the Client listens in silence. Two rounds of back-and-forth between complementary experts who talk to each other, not to you. The power is in the listening: hearing experts discuss YOUR problem without the temptation to defend, explain, or redirect. By default, all three roles are AI agents — use `--join` to take a seat.
+
+```bash
+/libertee:troika "We keep missing deadlines despite good planning"
+```
+
+---
+
+### Wise Crowds (Liberating Structure)
+
+![Wise Crowds](assets/card-wise-crowds.svg)
+
+4-5 diverse stakeholder perspectives, each seeing all previous contributions. The crowd's value isn't in consensus — it's in the spread. Where they converge reveals what's real. Where they diverge reveals what's interesting. What nobody mentions reveals the blind spot. The Facilitator's synthesis maps convergence, divergence, blind spots, and the signal in the noise.
+
+```bash
+/libertee:wise-crowds "Should we open-source our internal tooling?"
+```
+
+---
+
 ## Features
 
 ### Logic Modes
 
-Debate and Six Hats support alternative evaluation logic:
+All methods support alternative evaluation logic:
 
 | Mode | What it does | Flag |
 |------|-------------|------|
@@ -94,6 +142,19 @@ Take on a role yourself — bring your real emotions, domain knowledge, or convi
 /libertee:disney "New onboarding" --join dreamer           # Your vision
 /libertee:pre-mortem "Platform migration" --join doom      # You know where it hurts
 /libertee:polarity "Autonomy vs Alignment" --join a        # Your bias, made visible
+/libertee:triz "Sprint reliability" --join saboteur        # Your insider sabotage knowledge
+/libertee:w3 "Last quarter" --join so-what                 # Your interpretation
+/libertee:troika "Missed deadlines" --join client          # Your real problem, AI consults
+/libertee:wise-crowds "Open-source strategy" --join CTO    # Your seat at the table
+```
+
+### Brief Mode
+
+All methods support `--brief` for tighter output — same structure, same perspectives, fewer words. Ideal for mobile or when you need a quick pulse rather than a deep dive.
+
+```bash
+/libertee:six-hats "Team restructuring" --brief
+/libertee:troika "Scaling challenges" --brief --join client
 ```
 
 ### Session Context
@@ -186,6 +247,7 @@ Methods in this plugin are referenced for educational and descriptive purposes. 
 - **Pre-Mortem Analysis** is a technique developed by Gary Klein.
 - **Tetralemma** is rooted in Indian logic, formalized for systemic work by Matthias Varga von Kibed and Insa Sparrer.
 - **Adversarial Debate** draws on multi-agent debate research (MIT CSAIL, Mitsubishi Electric).
+- **TRIZ**, **W³ (What? So What? Now What?)**, **Troika Consulting**, and **Wise Crowds** are [Liberating Structures](https://www.liberatingstructures.com/) developed by Henri Lipmanowicz and Keith McCandless.
 
 ## Author
 

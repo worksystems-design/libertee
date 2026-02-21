@@ -1,6 +1,6 @@
 ---
 description: "Polarity Management® — map and manage tensions that can't be solved, only balanced"
-argument-hint: "<pole A> vs <pole B> [--join a|b]"
+argument-hint: "<pole A> vs <pole B> [--join a|b] [--tetralemma] [--brief]"
 allowed-tools: Read
 ---
 
@@ -19,6 +19,36 @@ Classic examples: Centralization vs. Decentralization, Stability vs. Innovation,
 - Detect the user's language from their input
 - ALL agents must respond in that language
 - Pass the detected language explicitly to every agent prompt
+
+## Brief Mode (--brief flag)
+
+When `--brief` is present, the session runs with the same structure, but tighter:
+
+- **Pole Advocates:** Each maps their pole in **3-4 sentences** — upsides and downsides, no elaboration
+- **Your Polarity Map synthesis:** Bullet points only — one line per quadrant, one line per warning sign, one line per action step
+- **Scene-setting:** One sentence
+
+Brief mode cuts prose, not nuance. Ideal for mobile or quick polarity scans.
+
+## Logic Mode
+
+This skill supports two logic modes (Polarity mode is inherent — this method IS polarity management):
+
+### Binary (default)
+The Facilitator synthesizes into a Polarity Map with four quadrants, virtuous/vicious cycles, warning signs, and action steps.
+- Use for most polarity explorations
+
+### Tetralemma (--tetralemma flag)
+The Facilitator's synthesis evaluates the polarity through 4+1 positions from the Tetralemma (rooted in Indian logic, formalized for systemic work by Matthias Varga von Kibed and Insa Sparrer):
+1. **The One** — Pole A should dominate right now given the current context
+2. **The Other** — Pole B should dominate right now given the current context
+3. **Both** — active management of both poles simultaneously is the answer
+4. **Neither** — the real tension isn't between these two poles
+5. **None of the Above** — the polarity is framed wrong; the real pair is different
+
+Use when you suspect the two poles as named might not be the real tension — or when you want to challenge whether this is truly a polarity or actually a problem to solve.
+
+Detect the mode from the user's arguments. If `--tetralemma` is present, use Tetralemma mode. Otherwise, default to Binary.
 
 ## Join Mode (--join flag)
 
@@ -107,6 +137,17 @@ Synthesize both perspectives into a Polarity Map:
 
 #### Where Are We Now?
 [Based on how the user framed the polarity: which pole are they currently over-emphasizing? What would rebalancing look like?]
+
+**Tetralemma mode:**
+
+Evaluate the polarity through the Tetralemma:
+1. **The One** — Pole A should dominate right now because...
+2. **The Other** — Pole B should dominate right now because...
+3. **Both** — active management of both simultaneously means...
+4. **Neither** — the real tension isn't between these two poles, it's...
+5. **None of the Above** — this isn't a polarity at all, it's actually...
+
+Conclude: Which position best serves the user's situation? Does the Polarity Map still hold, or did the Tetralemma reveal something different?
 
 ## Rules for You (Facilitator)
 

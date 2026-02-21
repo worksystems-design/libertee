@@ -1,6 +1,6 @@
 ---
 description: "Pre-Mortem Analysis — imagine failure first, then prevent it"
-argument-hint: "<project or decision> [--join doom]"
+argument-hint: "<project or decision> [--join doom] [--tetralemma | --polarity] [--brief]"
 allowed-tools: Read
 ---
 
@@ -13,6 +13,42 @@ You are the **Facilitator** of a Pre-Mortem session, based on Gary Klein's techn
 - Detect the user's language from their input
 - ALL agents must respond in that language
 - Pass the detected language explicitly to every agent prompt
+
+## Brief Mode (--brief flag)
+
+When `--brief` is present, the session runs with the same structure, but tighter:
+
+- **Doom Analyst:** **3-4 failure scenarios** instead of 4-6, each in **2 sentences** — scenario + root cause only
+- **Reality Check:** One-line verdict per scenario (Already doing / Drifting / Not yet)
+- **Your prevention plan:** Top 3 threats as bullets, 3 actions as bullets, uncomfortable truth in one sentence
+- **Scene-setting:** One sentence, no dramatic paragraph
+
+Brief mode cuts drama, not foresight. Ideal for mobile or quick risk scans.
+
+## Logic Mode
+
+This skill supports three logic modes:
+
+### Binary (default)
+The Facilitator synthesizes threats, warning signs, preventive actions, and the uncomfortable truth.
+- Use for most risk assessments where you want a clear prevention plan
+
+### Tetralemma (--tetralemma flag)
+The Facilitator's prevention plan evaluates the top threats through 4+1 positions from the Tetralemma (rooted in Indian logic, formalized for systemic work by Matthias Varga von Kibed and Insa Sparrer):
+1. **The One** — the obvious top threat is the real danger
+2. **The Other** — the less obvious threat is actually more dangerous
+3. **Both** — multiple threats compound in ways neither alone predicts
+4. **Neither** — the real risk isn't in any of the generated scenarios
+5. **None of the Above** — the project framing itself is the root cause of future failure
+
+Use when the doom scenarios reveal contradictory risks and you want to go deeper than ranking them.
+
+### Polarity (--polarity flag)
+The Facilitator's prevention plan identifies the underlying polarity that makes the project risky — the ongoing tension (e.g., speed vs. thoroughness, autonomy vs. coordination) that creates the failure conditions.
+
+Use when the failure scenarios cluster around a recurring tension that can't be eliminated, only managed.
+
+Detect the mode from the user's arguments. If `--tetralemma` is present, use Tetralemma mode. If `--polarity` is present, use Polarity mode. Otherwise, default to Binary.
 
 ## Join Mode (--join flag)
 
@@ -88,6 +124,24 @@ Based on both passes, create a prevention plan:
 
 #### The Uncomfortable Truth
 [The one thing nobody wants to hear but everyone needs to — the "elephant in the room" that emerged from this analysis]
+
+**Tetralemma mode:**
+
+Evaluate the top threats through the Tetralemma:
+1. **The One** — the obvious top threat is the real danger because...
+2. **The Other** — the less obvious threat is more dangerous because...
+3. **Both** — the threats compound: together they create...
+4. **Neither** — the real risk none of the scenarios captured is...
+5. **None of the Above** — the project framing itself is the problem because...
+
+Conclude: Which position reveals the deepest risk?
+
+**Polarity mode:**
+
+Identify the underlying polarity that creates the failure conditions:
+1. **The Polarity** — What recurring tension makes this project risky?
+2. **The Map** — What's valuable on each side of this tension? What breaks when either side dominates?
+3. **Rebalancing** — Where is the project currently? What does healthy management of this tension look like?
 
 ## Rules for You (Facilitator)
 

@@ -238,15 +238,161 @@ A single prompt like "analyze this from multiple angles" produces a polite, bala
 
 ---
 
+### /libertee:triz — TRIZ ([Liberating Structures](https://www.liberatingstructures.com/6-making-space-with-triz/))
+
+```
+┌─────────────────────────────────────┐
+│  💥 Facilitator     ← reverses     │
+│       ┌──────────┐                  │
+│       │🔥        │                  │
+│       │Saboteur  │  × 2 passes     │
+│       └──────────┘                  │
+│  🔥 sabotage ──▶ 🔬 reality check │
+└─────────────────────────────────────┘
+```
+
+**What it does:** Reverse brainstorming — "What must we do to guarantee the worst possible outcome?" Then: "Are we already doing any of this?"
+
+**The agent:**
+- **Saboteur** — Generates 8-10 creative sabotage strategies with dark humor. Second pass: reality-checks each one as "Already doing / Drifting toward / Not yet."
+
+**Best for:** Surfacing counterproductive behaviors that are hiding in plain sight.
+
+**Use when:**
+- Something keeps going wrong and nobody can explain why
+- You want to find what to STOP doing (not what to start)
+- The team needs a safe, humorous way to name dysfunctions
+- You suspect people are sabotaging their own goals without realizing it
+
+**Typical topics:** "Our sprint delivery reliability" / "Cross-team collaboration" / "Customer retention" / "Meeting culture"
+
+**What makes it special:** The reverse framing unlocks honesty. It's easier to say "we could sabotage delivery by adding last-minute scope changes" than to say "we keep adding last-minute scope changes." The humor makes it safe to name elephants in the room.
+
+**Example:** `/libertee:triz "Our ability to deliver on commitments"`
+
+---
+
+### /libertee:w3 — W³: What? So What? Now What? ([Liberating Structures](https://www.liberatingstructures.com/9-what-so-what-now-what-w/))
+
+```
+┌─────────────────────────────────────┐
+│  🔄 Facilitator     ← separates    │
+│  ┌───┐  ──▶  ┌───┐  ──▶  ┌───┐    │
+│  │👁️ │       │🧠 │       │🚀 │    │
+│  │Wha│       │So │       │Now│    │
+│  │t? │       │Wha│       │Wha│    │
+│  │   │       │t? │       │t? │    │
+│  └───┘       └───┘       └───┘    │
+└─────────────────────────────────────┘
+```
+
+**What it does:** Structured reflection in three strictly separated phases — observation (what happened?), interpretation (what does it mean?), and action (what do we do now?).
+
+**The agent:**
+- **Reflector** — Runs three times with strict phase discipline. What?: facts only, no interpretation. So What?: patterns and meaning, no action yet. Now What?: concrete next steps.
+
+**Best for:** Learning from experience — especially when teams jump to solutions without understanding what actually happened.
+
+**Use when:**
+- After a project, sprint, or event that needs a debrief
+- You want to separate observation from interpretation from action
+- Teams keep having the same retrospective insights without change
+- You need a structured path from "what happened" to "what we do about it"
+
+**Typical topics:** "Our last product launch" / "The Q4 reorganization" / "This quarter's delivery results" / "The customer escalation last week"
+
+**What makes it special:** The strict separation prevents the most common retrospective trap: jumping from "something went wrong" straight to "here's the fix" without pausing to understand WHY it went wrong. The same Reflector agent runs all three phases — the discipline is in keeping them apart.
+
+**Example:** `/libertee:w3 "Our team's way of working over the last quarter"`
+
+---
+
+### /libertee:troika — Troika Consulting ([Liberating Structures](https://www.liberatingstructures.com/8-troika-consulting/))
+
+```
+┌─────────────────────────────────────┐
+│  🔺 Facilitator     ← synthesizes  │
+│       ┌───┐                        │
+│       │🎯 │  presents              │
+│       │Cli│                        │
+│       │ent│                        │
+│       └───┘                        │
+│       ┌───┐   ┌───┐               │
+│       │1️⃣ │ ⇄ │2️⃣ │  2 rounds    │
+│       │C1 │   │C2 │               │
+│       └───┘   └───┘               │
+└─────────────────────────────────────┘
+```
+
+**What it does:** A Client presents a problem, then two Consultants with complementary expertise brainstorm openly while the Client listens. Two rounds. Then the Client reflects.
+
+**The agents:**
+- **Client** — Presents the problem with specificity and emotional honesty. Reflects after hearing the consultants.
+- **Consultant 1** — First expert perspective. Thinks out loud.
+- **Consultant 2** — Counter perspective. Builds on, challenges, or extends Consultant 1's thinking.
+
+**Best for:** Getting fresh expert perspectives on a problem you're too close to.
+
+**Use when:**
+- You're stuck in your own perspective on a problem
+- You want to hear experts discuss your problem without defending yourself
+- A problem needs two different lenses, not five (lighter than Wise Crowds)
+- You want the intimacy of a small consultation, not a crowd
+
+**Typical topics:** "We keep missing deadlines despite good planning" / "Our team's morale is dropping" / "I can't get buy-in for my proposal" / "We're struggling to scale"
+
+**What makes it special:** By default, all three roles are AI agents — you observe the full consultation. The consultants talk to EACH OTHER, not to the client, which produces more honest brainstorming. With `--join client`, you present your real problem with insider depth; with `--join 1` or `--join 2`, you take an expert seat alongside an AI colleague.
+
+**Example:** `/libertee:troika "We keep having the same arguments about technical debt"`
+
+---
+
+### /libertee:wise-crowds — Wise Crowds ([Liberating Structures](https://www.liberatingstructures.com/13-wise-crowds/))
+
+```
+┌─────────────────────────────────────┐
+│  👥 Facilitator     ← synthesizes  │
+│  ┌───┐ ┌───┐ ┌───┐ ┌───┐ ┌───┐   │
+│  │💼 │ │🔧 │ │📊 │ │🛡️ │ │💡 │   │
+│  │Adv│ │Adv│ │Adv│ │Adv│ │Adv│   │
+│  │ 1 │ │ 2 │ │ 3 │ │ 4 │ │ 5 │   │
+│  └───┘ └───┘ └───┘ └───┘ └───┘   │
+│  Each sees all previous advisors   │
+└─────────────────────────────────────┘
+```
+
+**What it does:** 4-5 diverse stakeholder perspectives each advise on your problem. Each advisor sees all previous contributions, so perspectives build on each other.
+
+**The agent:**
+- **Crowd Advisor** — Spawned 4-5 times with different stakeholder perspectives chosen for the topic. Stays in character, gives direct advice, names what others miss, ends with one clear recommendation.
+
+**Best for:** Getting the breadth of a full stakeholder room when you need diverse input.
+
+**Use when:**
+- A decision affects multiple stakeholders with different interests
+- You want to surface perspectives you'd never think of yourself
+- You need more breadth than Troika (5 perspectives vs. 2)
+- You want to find blind spots — what nobody mentions is often the most important thing
+
+**Typical topics:** "Should we open-source our internal tooling?" / "How should we restructure the organization?" / "What's our response to this market shift?" / "Should we expand into this new segment?"
+
+**What makes it special:** The sequential accumulation with diverse stakeholders produces a rich, layered picture. The Facilitator's synthesis maps convergence (what multiple advisors raised independently), divergence (productive tensions), blind spots (what's conspicuously absent), and the signal in the noise (the 2-3 insights that matter most). With `--join`, you can take any perspective seat or add your own.
+
+**Example:** `/libertee:wise-crowds "Should we restructure from projects to products?"`
+
+---
+
 ## Logic Modes
 
 Several methods support alternative evaluation logic via flags. These change how the final synthesis works — the debate/exploration runs the same way, but the conclusion is framed differently.
 
-| Flag | Logic | What it does | Available in |
-|------|-------|-------------|-------------|
-| *(default)* | **Binary** — yes/no, pick a side | Judge/Blue Hat gives a clear recommendation | six-hats, debate |
-| `--tetralemma` | **Tetralemma** (Varga von Kibed & Sparrer) | Evaluates 5 positions: the one, the other, both, neither, none of the above | six-hats, debate |
-| `--polarity` | **Polarity** (Barry Johnson) | Maps the tension instead of resolving it | six-hats, debate |
+| Flag | Logic | What it does |
+|------|-------|-------------|
+| *(default)* | **Binary** — yes/no, pick a side | Facilitator gives a clear recommendation |
+| `--tetralemma` | **Tetralemma** (Varga von Kibed & Sparrer) | Evaluates 5 positions: the one, the other, both, neither, none of the above |
+| `--polarity` | **Polarity** (Barry Johnson) | Maps the tension instead of resolving it |
+
+Available in all 9 methods.
 
 ### When to use which logic
 
@@ -282,8 +428,12 @@ Every method supports `--join <role>` — you take on one of the agent roles you
 | `/libertee:six-hats` | `white`, `red`, `green`, `yellow`, `black` |
 | `/libertee:debate` | `pro`, `contra`, `judge` |
 | `/libertee:disney` | `dreamer`, `realist`, `critic` |
-| `/libertee:pre-mortem` | `doom` |
+| `/libertee:pre-mortem` | `doom`, `reality` |
 | `/libertee:polarity` | `a`, `b` |
+| `/libertee:triz` | `saboteur`, `reality` |
+| `/libertee:w3` | `what`, `so-what`, `now-what` |
+| `/libertee:troika` | `client`, `1`, `2` |
+| `/libertee:wise-crowds` | any perspective (name it freely) |
 
 ### Examples
 
@@ -293,6 +443,10 @@ Every method supports `--join <role>` — you take on one of the agent roles you
 /libertee:disney "New onboarding concept" --join dreamer
 /libertee:pre-mortem "Platform migration" --join doom
 /libertee:polarity "Autonomy vs Alignment" --join a
+/libertee:triz "Sprint reliability" --join saboteur
+/libertee:w3 "Last quarter" --join so-what
+/libertee:troika "Missed deadlines" --join client
+/libertee:wise-crowds "Open-source strategy" --join CTO
 ```
 
 ---
@@ -308,10 +462,16 @@ Every method supports `--join <role>` — you take on one of the agent roles you
 | "I have a big idea, now what?" | `/libertee:disney` |
 | "What could go wrong with this?" | `/libertee:pre-mortem` |
 | "We keep going back and forth" | `/libertee:polarity` |
+| "Something keeps going wrong and we don't know why" | `/libertee:triz` |
+| "What actually happened and what do we do now?" | `/libertee:w3` |
+| "I'm stuck on a problem and need expert input" | `/libertee:troika` |
+| "I need diverse stakeholder perspectives" | `/libertee:wise-crowds` |
 | "I need to make a decision" | `/libertee:six-hats` (comprehensive) or `/libertee:debate` (focused) |
 | "I need creative ideas AND a plan" | `/libertee:disney` |
 | "The team is too optimistic" | `/libertee:pre-mortem` |
 | "Both sides have a point" | `/libertee:polarity` or `/libertee:debate --tetralemma` |
+| "We need to learn from experience" | `/libertee:w3` |
+| "What should we STOP doing?" | `/libertee:triz` |
 
 ### By goal
 
@@ -325,6 +485,12 @@ Every method supports `--join <role>` — you take on one of the agent roles you
 | **Manage a tension** | `/libertee:polarity` |
 | **Challenge your own thinking** | `/libertee:debate` |
 | **Understand a complex situation** | `/libertee:six-hats --tetralemma` |
+| **Stop counterproductive behavior** | `/libertee:triz` |
+| **Learn from an experience** | `/libertee:w3` |
+| **Get expert consultation** | `/libertee:troika` (2 experts) |
+| **Get broad stakeholder input** | `/libertee:wise-crowds` (4-5 perspectives) |
+| **Run a retrospective** | `/libertee:w3` then `/libertee:triz` |
+| **Unstick a problem** | `/libertee:troika` or `/libertee:wise-crowds` |
 
 ### Method combinations
 

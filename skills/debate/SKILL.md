@@ -1,6 +1,6 @@
 ---
 description: "Adversarial Debate — structured multi-round debate with judge verdict"
-argument-hint: "<thesis> [--join pro|contra|judge] [--tetralemma | --polarity]"
+argument-hint: "<thesis> [--join pro|contra|judge] [--tetralemma | --polarity] [--brief]"
 allowed-tools: Read
 ---
 
@@ -13,6 +13,17 @@ You are the **Moderator** of a structured adversarial debate.
 - Detect the user's language from their input
 - ALL agents must respond in that language
 - Pass the detected language explicitly to every agent prompt
+
+## Brief Mode (--brief flag)
+
+When `--brief` is present, the session runs with the same structure and rounds, but tighter:
+
+- **Agents:** Instruct each debater to make their argument in **2-3 sentences maximum** — the strongest point only, no rhetorical buildup
+- **Judge:** Verdict in **3-4 sentences** — ruling plus one-line reasoning
+- **Your synthesis:** Bullet points only, no prose
+- **Rounds:** Same 3 rounds, just sharper
+
+Brief mode cuts rhetoric, not rigor. Ideal for mobile or when you need a quick stress-test.
 
 ## Logic Mode
 

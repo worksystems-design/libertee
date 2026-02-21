@@ -1,7 +1,7 @@
 {
   "name": "libertee",
-  "version": "0.6.0",
-  "description": "Structured thinking methods as multi-agent sessions — Six Thinking Hats, Adversarial Debate, Disney Method, Pre-Mortem, Polarity Management",
+  "version": "0.7.0",
+  "description": "Structured thinking methods as multi-agent sessions — Six Thinking Hats, Adversarial Debate, Disney Method, Pre-Mortem, Polarity Management, TRIZ, W³, Troika Consulting, Wise Crowds",
   "author": {
     "name": "Thomas Krause",
     "url": "https://worksystems.design"
