@@ -1,0 +1,42 @@
+name: Sync skills to libertee-thinking
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'skills/**'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout libertee
+        uses: actions/checkout@v4
+        with:
+          path: libertee
+
+      - name: Checkout libertee-thinking
+        uses: actions/checkout@v4
+        with:
+          repository: worksystems-design/libertee-thinking
+          token: ${{ secrets.THINKING_SYNC_TOKEN }}
+          path: libertee-thinking
+
+      - name: Sync skills
+        run: |
+          rm -rf libertee-thinking/.claude/skills/
+          mkdir -p libertee-thinking/.claude/skills/
+          cp -r libertee/skills/* libertee-thinking/.claude/skills/
+
+      - name: Commit and push
+        run: |
+          cd libertee-thinking
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to sync"
+          else
+            git commit -m "Sync skills from libertee $(date -u +%Y-%m-%d)"
+            git push
+          fi
