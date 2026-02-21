@@ -1,6 +1,7 @@
 ---
 description: "Help choose the right thinking method for your situation"
 argument-hint: "[situation or goal to think through]"
+allowed-tools: Read
 triggers:
   - "help me think"
   - "hilf mir nachdenken"
