@@ -137,6 +137,10 @@ claude --plugin-dir ./libertee
 /plugin uninstall libertee@worksystems-design-libertee
 ```
 
+### On Mobile or Web
+
+Fork [libertee-thinking](https://github.com/worksystems-design/libertee-thinking), then open your fork in Claude Code on mobile or web. Same methods, no plugin installation needed.
+
 ## How It Works
 
 Each method follows the same architecture:
