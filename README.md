@@ -198,10 +198,6 @@ claude --plugin-dir ./libertee
 /plugin uninstall libertee@worksystems-design-libertee
 ```
 
-### On Mobile or Web
-
-Fork [libertee-thinking](https://github.com/worksystems-design/libertee-thinking), then open your fork in Claude Code on mobile or web. Same methods, no plugin installation needed.
-
 ## How It Works
 
 Each method follows the same architecture:
@@ -215,19 +211,17 @@ Agents are temporary — they exist only during their turn, deliver their perspe
 
 ## Examples
 
-Complete example sessions in English and German:
+Complete example sessions (all in `--brief` mode) in English and German:
 
-**Standard sessions:**
-- Six Thinking Hats® — [English](examples/six-hats.en.md) · [Deutsch](examples/six-hats.de.md)
-- Adversarial Debate — [English](examples/debate.en.md) · [Deutsch](examples/debate.de.md)
-- Disney Creative Strategy — [English](examples/disney.en.md) · [Deutsch](examples/disney.de.md)
-- Pre-Mortem — [English](examples/pre-mortem.en.md) · [Deutsch](examples/pre-mortem.de.md)
-- Polarity Management® — [English](examples/polarity.en.md) · [Deutsch](examples/polarity.de.md)
-
-**With logic modes and --join:**
-- Debate with Tetralemma — [English](examples/debate-tetralemma.en.md) · [Deutsch](examples/debate-tetralemma.de.md)
-- Six Hats with --join (user as Red Hat) — [English](examples/six-hats-join.en.md) · [Deutsch](examples/six-hats-join.de.md)
-- Debate with --join (user as Pro) — [English](examples/debate-join.en.md) · [Deutsch](examples/debate-join.de.md)
+- Six Thinking Hats® — [English](examples/en/six-hats.md) · [Deutsch](examples/de/six-hats.md)
+- Adversarial Debate — [English](examples/en/debate.md) · [Deutsch](examples/de/debate.md)
+- Disney Creative Strategy — [English](examples/en/disney.md) · [Deutsch](examples/de/disney.md)
+- Pre-Mortem — [English](examples/en/pre-mortem.md) · [Deutsch](examples/de/pre-mortem.md)
+- Polarity Management® — [English](examples/en/polarity.md) · [Deutsch](examples/de/polarity.md)
+- TRIZ — [English](examples/en/triz.md) · [Deutsch](examples/de/triz.md)
+- W³ — [English](examples/en/w3.md) · [Deutsch](examples/de/w3.md)
+- Troika Consulting — [English](examples/en/troika.md) · [Deutsch](examples/de/troika.md)
+- Wise Crowds — [English](examples/en/wise-crowds.md) · [Deutsch](examples/de/wise-crowds.md)
 
 ## Contributing
 
