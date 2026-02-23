@@ -185,7 +185,7 @@ Modules can be chained. Run a method, then reflect on it.
 /libertee:method-check
 ```
 
-Inspired by [Liberating Structure Strings](https://www.liberatingstructures.com/string/) — the idea that individual structures become more powerful when composed into sequences.
+Inspired by [Liberating Structure Strings](https://www.liberatingstructures.com/sample-strings/) — the idea that individual structures become more powerful when composed into sequences.
 
 ---
 
@@ -322,7 +322,7 @@ Methods in this plugin are referenced for educational and descriptive purposes. 
 - **Adversarial Debate** draws on multi-agent debate research (MIT CSAIL, Mitsubishi Electric).
 - **TRIZ**, **W³ (What? So What? Now What?)**, **Troika Consulting**, and **Wise Crowds** are [Liberating Structures](https://www.liberatingstructures.com/) developed by Henri Lipmanowicz and Keith McCandless.
 - **Bias Check** draws on cognitive bias research by Daniel Kahneman (*Thinking, Fast and Slow*, 2011).
-- **Composition** of modules is inspired by [Liberating Structure Strings](https://www.liberatingstructures.com/string/).
+- **Composition** of modules is inspired by [Liberating Structure Strings](https://www.liberatingstructures.com/sample-strings/).
 
 ## Author
 
