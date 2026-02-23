@@ -382,6 +382,57 @@ A single prompt like "analyze this from multiple angles" produces a polite, bala
 
 ---
 
+## Meta-Modules
+
+Meta-Modules don't think about the content — they think about the thinking. They are designed to run **after** any method and read the session context to reflect on what shaped the result.
+
+No logic modes, no join mode. Meta-Modules are lightweight single-agent reflections.
+
+### /libertee:bias-check — Bias Check (Kahneman)
+
+**What it does:** Identifies 3-4 cognitive biases that may have shaped the session's conclusion, mapped to concrete moments. Ends with one uncomfortable question.
+
+**Best for:** When you accept a result too quickly and want to check if that comfort is earned or manufactured by your own cognition.
+
+**Use when:**
+- The conclusion felt "obvious" — suspiciously so
+- You want to challenge your own acceptance of the result
+- A decision session produced consensus and nobody pushed back
+
+**Example:** Run any method, then: `/libertee:bias-check`
+
+---
+
+### /libertee:frame-check — Frame Check
+
+**What it does:** Analyzes how the original question's framing constrained the solution space. Identifies framing effects and offers one reframe that opens up what the original wording closed off.
+
+**Best for:** When you suspect the question itself narrowed the answers before any thinking even started.
+
+**Use when:**
+- The result feels limited — like it only explored a narrow corridor
+- You used a binary question ("Should we X or Y?") and wonder what C through Z look like
+- You want to see what becomes visible with a different frame
+
+**Example:** Run any method, then: `/libertee:frame-check`
+
+---
+
+### /libertee:method-check — Method Check
+
+**What it does:** Examines the structural blind spots of the method that was just used. Every method has a shape, and that shape determines what it can and cannot see. Suggests one complementary method.
+
+**Best for:** When you want to know what you're missing — not because the method was bad, but because every method has limits.
+
+**Use when:**
+- You ran a method and want to know what it structurally couldn't surface
+- You're deciding whether to chain a second method and want to pick the right complement
+- The result feels complete — and you're suspicious of that feeling
+
+**Example:** Run any method, then: `/libertee:method-check`
+
+---
+
 ## Logic Modes
 
 Several methods support alternative evaluation logic via flags. These change how the final synthesis works — the debate/exploration runs the same way, but the conclusion is framed differently.
@@ -472,6 +523,9 @@ Every method supports `--join <role>` — you take on one of the agent roles you
 | "Both sides have a point" | `/libertee:polarity` or `/libertee:debate --tetralemma` |
 | "We need to learn from experience" | `/libertee:w3` |
 | "What should we STOP doing?" | `/libertee:triz` |
+| "I accept the result but don't fully trust it" | `/libertee:bias-check` (after any method) |
+| "The question itself might be wrong" | `/libertee:frame-check` (after any method) |
+| "What can this method not see?" | `/libertee:method-check` (after any method) |
 
 ### By goal
 
@@ -491,6 +545,10 @@ Every method supports `--join <role>` — you take on one of the agent roles you
 | **Get broad stakeholder input** | `/libertee:wise-crowds` (4-5 perspectives) |
 | **Run a retrospective** | `/libertee:w3` then `/libertee:triz` |
 | **Unstick a problem** | `/libertee:troika` or `/libertee:wise-crowds` |
+| **Check for cognitive biases** | `/libertee:bias-check` (after any method) |
+| **Question the question** | `/libertee:frame-check` (after any method) |
+| **Find structural blind spots** | `/libertee:method-check` (after any method) |
+| **Full meta-reflection** | `/libertee:bias-check` → `/libertee:frame-check` → `/libertee:method-check` |
 
 ### Method combinations
 
@@ -510,6 +568,16 @@ Methods can be chained for deeper exploration. Run them sequentially in the same
 2. `/libertee:polarity "the core tension"` — map the central trade-off
 3. `/libertee:pre-mortem "the chosen direction"` — anticipate what could go wrong
 
+**Meta-Reflection Flow** (after any method):
+1. `/libertee:bias-check` — what biases shaped the result?
+2. `/libertee:frame-check` — how did the question constrain the answers?
+3. `/libertee:method-check` — what can this method structurally not see?
+
+You don't need all three every time. Pick the one that matches your doubt:
+- Result feels too comfortable → `/libertee:bias-check`
+- Result feels too narrow → `/libertee:frame-check`
+- Result feels too complete → `/libertee:method-check`
+
 ---
 
 ## How to Help
@@ -523,7 +591,8 @@ When the user describes their situation:
 5. **Recommend** the best-fitting method with a brief explanation of why it fits their situation
 6. **Show** the exact command they should run, with their topic as the argument
 7. If the situation is complex enough, **suggest a combination** from the method chains above
-8. If ambiguous, **ask one clarifying question** — "Are you looking to explore broadly, stress-test a specific idea, or manage an ongoing tension?"
+8. If the user expresses doubt about a result, **suggest a meta-module** — bias-check for suspicious comfort, frame-check for narrow results, method-check for structural gaps
+9. If ambiguous, **ask one clarifying question** — "Are you looking to explore broadly, stress-test a specific idea, or manage an ongoing tension?"
 
 ## Language Behavior
 

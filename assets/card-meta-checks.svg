@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 165" font-family="Inter, -apple-system, system-ui, sans-serif">
+  <defs>
+    <style>
+      .agent-name { font-size: 11px; font-weight: 600; fill: white; }
+      .agent-role { font-size: 9px; fill: rgba(255,255,255,0.8); }
+      .facilitator-name { font-size: 11px; font-weight: 600; }
+      .facilitator-role { font-size: 9px; }
+      .arrow { stroke: #d1d5db; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="165" rx="12" fill="#fffbeb" stroke="#f59e0b"/>
+
+  <text x="25" y="30" font-size="15" font-weight="700" fill="#78350f">🪞  Meta-Checks</text>
+
+  <!-- Synthesis Input -->
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="#d97706" opacity="0.15"/>
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="65" y="72" text-anchor="middle" class="facilitator-name" fill="#92400e">📥 Synthesis</text>
+  <text x="65" y="86" text-anchor="middle" class="facilitator-role" fill="#92400e">from method</text>
+
+  <line x1="115" y1="75" x2="145" y2="75" class="arrow"/>
+
+  <!-- Bias Check -->
+  <rect x="155" y="47" width="120" height="56" rx="8" fill="#92400e"/>
+  <text x="215" y="72" text-anchor="middle" class="agent-name">🔍 Bias Check</text>
+  <text x="215" y="86" text-anchor="middle" class="agent-role">Cognitive biases</text>
+
+  <!-- Frame Check -->
+  <rect x="290" y="47" width="120" height="56" rx="8" fill="#b45309"/>
+  <text x="350" y="72" text-anchor="middle" class="agent-name">🖼️ Frame Check</text>
+  <text x="350" y="86" text-anchor="middle" class="agent-role">Question framing</text>
+
+  <!-- Method Check -->
+  <rect x="425" y="47" width="130" height="56" rx="8" fill="#d97706"/>
+  <text x="490" y="72" text-anchor="middle" class="agent-name">🔬 Method Check</text>
+  <text x="490" y="86" text-anchor="middle" class="agent-role">Structural blind spots</text>
+
+  <!-- Footer -->
+  <text x="25" y="135" font-size="9" fill="#92400e" font-style="italic">"Methods think about content. Meta-Checks think about the thinking."</text>
+  <text x="25" y="150" font-size="9" fill="#92400e">Run after any method — chain them for deeper reflection</text>
+</svg>

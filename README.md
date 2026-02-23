@@ -2,9 +2,19 @@
 
 Structured thinking methods as multi-agent sessions for Claude Code.
 
-Facilitation techniques from the real world — Six Thinking Hats, Adversarial Debate, Disney Creative Strategy, Pre-Mortem Analysis, Polarity Management, TRIZ, W³, Troika Consulting, and Wise Crowds — each powered by specialized AI agents that take on distinct roles and build on each other's insights.
+Facilitation techniques from the real world — Six Thinking Hats, Adversarial Debate, Disney Creative Strategy, Pre-Mortem Analysis, Polarity Management, TRIZ, W³, Troika Consulting, and Wise Crowds — each powered by specialized AI agents that take on distinct roles and build on each other's insights. Plus three meta-cognitive modules that reflect on your thinking itself.
 
 No code. No build steps. Just Markdown files that orchestrate multi-agent thinking sessions.
+
+## Table of Contents
+
+- [The Methods](#the-methods) — 9 structured thinking methods
+- [Meta-Modules](#meta-modules) — 3 modules that think about the thinking
+- [Composition](#composition) — chain methods and meta-modules
+- [Features](#features) — logic modes, join mode, brief mode
+- [Installation](#installation) — GitHub or local
+- [How It Works](#how-it-works) — architecture overview
+- [Examples](#examples) — complete session transcripts
 
 ## The Methods
 
@@ -116,6 +126,69 @@ A Client presents a problem, then two Consultants brainstorm openly while the Cl
 
 ---
 
+## Meta-Modules
+
+Methods think about content. Meta-Modules think about the thinking.
+
+Three meta-cognitive checks you can run after any method — they read the session context and reflect on what shaped the result, not the result itself.
+
+![Meta-Checks](assets/card-meta-checks.svg)
+
+### Bias Check
+
+What cognitive biases make you trust the result too easily? Maps 3-4 biases to concrete moments in the session, then asks one uncomfortable question that challenges the conclusion.
+
+```bash
+/libertee:six-hats "Should we restructure?" --brief
+/libertee:bias-check
+```
+
+### Frame Check
+
+How did the way you phrased the question predetermine the answer space? Identifies framing effects in the original question and offers one reframe that opens up what the original wording closed off.
+
+```bash
+/libertee:debate "Build vs. buy for our platform"
+/libertee:frame-check
+```
+
+### Method Check
+
+What can the method you just used structurally not see? Every method has a shape — and that shape has blind spots. Identifies structural limits and suggests one complementary method to cover the gap.
+
+```bash
+/libertee:pre-mortem "Platform migration"
+/libertee:method-check
+```
+
+---
+
+## Composition
+
+Modules can be chained. Run a method, then reflect on it.
+
+```bash
+# Decision quality: explore → stress-test → check your biases
+/libertee:six-hats "New pricing model" --brief
+/libertee:debate "The leading option from Six Hats"
+/libertee:bias-check
+
+# Innovation with guard rails: dream → anticipate failure → check the frame
+/libertee:disney "Rethink onboarding"
+/libertee:pre-mortem "The plan from Disney"
+/libertee:frame-check
+
+# Full meta-reflection after any method
+/libertee:wise-crowds "Open-source strategy"
+/libertee:bias-check
+/libertee:frame-check
+/libertee:method-check
+```
+
+Inspired by [Liberating Structure Strings](https://www.liberatingstructures.com/string/) — the idea that individual structures become more powerful when composed into sequences.
+
+---
+
 ## Features
 
 ### Logic Modes
@@ -223,6 +296,12 @@ Complete example sessions (all in `--brief` mode) in English and German:
 - Troika Consulting — [English](examples/en/troika.md) · [Deutsch](examples/de/troika.md)
 - Wise Crowds — [English](examples/en/wise-crowds.md) · [Deutsch](examples/de/wise-crowds.md)
 
+**Meta-Modules** (chained after a method):
+
+- Bias Check (after Six Hats) — [English](examples/en/bias-check.md) · [Deutsch](examples/de/bias-check.md)
+- Frame Check (after Debate) — [English](examples/en/frame-check.md) · [Deutsch](examples/de/frame-check.md)
+- Method Check (after Pre-Mortem) — [English](examples/en/method-check.md) · [Deutsch](examples/de/method-check.md)
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding new thinking methods.
@@ -242,6 +321,8 @@ Methods in this plugin are referenced for educational and descriptive purposes. 
 - **Tetralemma** is rooted in Indian logic, formalized for systemic work by Matthias Varga von Kibed and Insa Sparrer.
 - **Adversarial Debate** draws on multi-agent debate research (MIT CSAIL, Mitsubishi Electric).
 - **TRIZ**, **W³ (What? So What? Now What?)**, **Troika Consulting**, and **Wise Crowds** are [Liberating Structures](https://www.liberatingstructures.com/) developed by Henri Lipmanowicz and Keith McCandless.
+- **Bias Check** draws on cognitive bias research by Daniel Kahneman (*Thinking, Fast and Slow*, 2011).
+- **Composition** of modules is inspired by [Liberating Structure Strings](https://www.liberatingstructures.com/string/).
 
 ## Author
 
