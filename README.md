@@ -302,6 +302,12 @@ Complete example sessions (all in `--brief` mode) in English and German:
 - Frame Check (after Debate) — [English](examples/en/frame-check.md) · [Deutsch](examples/de/frame-check.md)
 - Method Check (after Pre-Mortem) — [English](examples/en/method-check.md) · [Deutsch](examples/de/method-check.md)
 
+## Community
+
+Questions, ideas, or just want to see what others are doing with Libertee?
+
+→ [Join the Discord](https://discord.gg/VhZeW3aJ5r)
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding new thinking methods.
