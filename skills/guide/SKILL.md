@@ -119,9 +119,10 @@ A single prompt like "analyze this from multiple angles" produces a polite, bala
 
 **Typical topics:** "Remote work is superior to office work" / "We should switch to microservices" / "Hiring specialists is better than generalists" / "We should build rather than buy"
 
-**What makes it special:** The agents are instructed to NEVER agree with each other. They must maintain their positions and counter every argument. This prevents the common AI pattern of politely converging — and produces genuinely useful tension. The strongest insights often come from points where one side clearly fails to counter the other.
+**What makes it special:** The agents are instructed to NEVER agree with each other. They must maintain their positions and counter every argument. This prevents the common AI pattern of politely converging — and produces genuinely useful tension. The strongest insights often come from points where one side clearly fails to counter the other. With `--personas`, cast specific figures into the roles — the position (Pro/Contra/Judge) stays fixed, the persona shapes voice and rhetoric.
 
 **Example:** `/libertee:debate "We should prioritize speed to market over code quality"`
+**With personas:** `/libertee:debate "Remote work is better than office" --personas "Sherlock Holmes, Dr. Watson"`
 
 ---
 
@@ -183,7 +184,7 @@ A single prompt like "analyze this from multiple angles" produces a polite, bala
 **The agent:**
 - **Doom Analyst** — Failure scenario generator. Runs twice: first to generate 4-6 vivid, specific failure scenarios across technical, organizational, human, and market dimensions. Second pass: reality-checks which failures are already showing early signs, which are most likely AND most damaging, and which are blind spots.
 
-**The flow:** The facilitator sets the scene dramatically ("It is 12 months from now. This project has failed. Spectacularly."). The Doom Analyst generates failure scenarios. Then the same agent does a reality check. Finally, the facilitator synthesizes into a prevention plan with top threats, early warning signs, preventive actions, and — most importantly — the uncomfortable truth nobody wants to hear.
+**The flow:** The facilitator sets the scene dramatically ("It is [time horizon] from now. This project has failed. Spectacularly.") — the facilitator infers the horizon from context: sprint → weeks, launch → months, strategy → years. The Doom Analyst generates failure scenarios. Then the same agent does a reality check. Finally, the facilitator synthesizes into a prevention plan with top threats, early warning signs, preventive actions, and — most importantly — the uncomfortable truth nobody wants to hear.
 
 **Best for:** Identifying risks before they happen — especially the ones nobody wants to talk about.
 
@@ -341,9 +342,10 @@ A single prompt like "analyze this from multiple angles" produces a polite, bala
 
 **Typical topics:** "We keep missing deadlines despite good planning" / "Our team's morale is dropping" / "I can't get buy-in for my proposal" / "We're struggling to scale"
 
-**What makes it special:** By default, all three roles are AI agents — you observe the full consultation. The consultants talk to EACH OTHER, not to the client, which produces more honest brainstorming. With `--join client`, you present your real problem with insider depth; with `--join 1` or `--join 2`, you take an expert seat alongside an AI colleague.
+**What makes it special:** By default, all three roles are AI agents — you observe the full consultation. The consultants talk to EACH OTHER, not to the client, which produces more honest brainstorming. With `--join client`, you present your real problem with insider depth; with `--join 1` or `--join 2`, you take an expert seat alongside an AI colleague. With `--personas`, name specific figures as your consultants — the method runs the same, but you hear Linus Torvalds and Jeff Bezos argue about your tech stack.
 
 **Example:** `/libertee:troika "We keep having the same arguments about technical debt"`
+**With personas:** `/libertee:troika "We can't decide on our tech stack" --personas "Linus Torvalds, Jeff Bezos"`
 
 ---
 
@@ -376,9 +378,10 @@ A single prompt like "analyze this from multiple angles" produces a polite, bala
 
 **Typical topics:** "Should we open-source our internal tooling?" / "How should we restructure the organization?" / "What's our response to this market shift?" / "Should we expand into this new segment?"
 
-**What makes it special:** The sequential accumulation with diverse stakeholders produces a rich, layered picture. The Facilitator's synthesis maps convergence (what multiple advisors raised independently), divergence (productive tensions), blind spots (what's conspicuously absent), and the signal in the noise (the 2-3 insights that matter most). With `--join`, you can take any perspective seat or add your own.
+**What makes it special:** The sequential accumulation with diverse stakeholders produces a rich, layered picture. The Facilitator's synthesis maps convergence (what multiple advisors raised independently), divergence (productive tensions), blind spots (what's conspicuously absent), and the signal in the noise (the 2-3 insights that matter most). With `--join`, you can take any perspective seat or add your own. With `--personas`, replace the auto-selected stakeholders with specific named figures — historical, fictional, or archetypal — who bring a recognizable voice and reasoning style.
 
 **Example:** `/libertee:wise-crowds "Should we restructure from projects to products?"`
+**With personas:** `/libertee:wise-crowds "The team lacks trust" --personas "Machiavelli, Adam Smith, Brené Brown, Sun Tzu"`
 
 ---
 
@@ -499,6 +502,37 @@ Every method supports `--join <role>` — you take on one of the agent roles you
 /libertee:troika "Missed deadlines" --join client
 /libertee:wise-crowds "Open-source strategy" --join CTO
 ```
+
+---
+
+## Personas Mode — `--personas`
+
+Three methods support `--personas` to replace auto-selected perspectives with specific named figures.
+
+**Available in:** `/libertee:wise-crowds`, `/libertee:troika`, `/libertee:debate`
+
+Personas can be historical persons, fictional characters, scientists, philosophers, archetypes — anyone with a recognizable voice and reasoning style. The method logic stays unchanged; the persona shapes how the role sounds.
+
+| Method | How personas are assigned |
+|--------|--------------------------|
+| `/libertee:wise-crowds` | Comma-separated list = crowd members (2-6 names) |
+| `/libertee:troika` | First name = Consultant 1, second = Consultant 2 |
+| `/libertee:debate` | First = Pro, second = Contra, optional third = Judge |
+
+```
+/libertee:wise-crowds "The team lacks trust" --personas "Machiavelli, Adam Smith, Brené Brown, Sun Tzu"
+/libertee:troika "We can't decide on our tech stack" --personas "Linus Torvalds, Jeff Bezos"
+/libertee:debate "Remote work is better than office" --personas "Sherlock Holmes, Dr. Watson"
+```
+
+Combine with `--join` — `--join` takes precedence for the user's role slot:
+
+```
+/libertee:debate "AI will replace developers" --join pro --personas "Turing, Dijkstra"
+# User plays Pro as Turing, AI plays Dijkstra as Contra
+```
+
+**When to suggest `--personas`:** When the user wants more character contrast than generic stakeholder labels provide, or when the framing of a specific historical/fictional figure would make the method more vivid and memorable.
 
 ---
 

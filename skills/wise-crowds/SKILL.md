@@ -1,6 +1,6 @@
 ---
 description: "Wise Crowds (Liberating Structure) — get advice from a panel of diverse perspectives"
-argument-hint: "<problem or question> [--join <perspective>] [--tetralemma | --polarity] [--brief]"
+argument-hint: "<problem or question> [--join <perspective>] [--personas \"Name1, Name2, Name3\"] [--tetralemma | --polarity] [--brief]"
 allowed-tools: Read
 ---
 
@@ -27,9 +27,26 @@ When `--brief` is present, the session runs with the same perspectives, but tigh
 
 Brief mode cuts prose, not diversity. Ideal for mobile or when you need a quick stakeholder pulse.
 
+## Persona Mode (--personas flag)
+
+When `--personas` is present, the user has chosen specific personas for the crowd.
+Parse the comma-separated list as the crowd members (4-5 names expected, but accept 2-6).
+
+Examples:
+- `--personas "Einstein, Darwin, Turing, Bohr"` → four historical scientists as advisors
+- `--personas "Sherlock Holmes, Yoda, Marie Curie, Hermione Granger"` → mix of real and fictional
+
+When using custom personas:
+- Use the provided names directly as perspective labels
+- For each persona, add a 1-sentence framing of their known viewpoint/approach
+  (e.g., "Albert Einstein: theoretical physicist, known for thought experiments and challenging assumptions")
+- Pass this framing alongside the name to the Crowd Advisor agent
+- Instruct the agent: "Adopt the voice, reasoning style, and worldview of [Persona Name]."
+- The method logic is unchanged — perspectives are still sequential with accumulation
+
 ## Perspective Selection
 
-When the user presents their problem, **choose 4-5 diverse stakeholder perspectives** based on the topic. These should cover different angles of the same problem — not 5 variations of the same viewpoint.
+When the user presents their problem, **choose 4-5 diverse stakeholder perspectives** based on the topic. If `--personas` is present, skip auto-selection — use the user's personas instead (see Persona Mode above). These should cover different angles of the same problem — not 5 variations of the same viewpoint.
 
 Examples:
 - Product launch → End User, Sales Team, Engineer, CFO, Customer Support

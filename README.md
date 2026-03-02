@@ -11,7 +11,7 @@ No code. No build steps. Just Markdown files that orchestrate multi-agent thinki
 - [The Methods](#the-methods) — 9 structured thinking methods
 - [Meta-Modules](#meta-modules) — 3 modules that think about the thinking
 - [Composition](#composition) — chain methods and meta-modules
-- [Features](#features) — logic modes, join mode, brief mode
+- [Features](#features) — logic modes, join mode, personas mode, brief mode
 - [Installation](#installation) — GitHub or local
 - [How It Works](#how-it-works) — architecture overview
 - [Examples](#examples) — complete session transcripts
@@ -34,10 +34,11 @@ Five perspectives, one at a time. Facts first, then feelings, creativity, opport
 
 ![Adversarial Debate](assets/card-debate.svg)
 
-A structured 3-round debate where Pro and Contra must never agree. Each round escalates — opening statements, rebuttals, final arguments — then a Judge delivers the verdict. The agents are instructed to maintain their positions and counter every argument. This prevents the common AI pattern of politely converging and produces genuinely useful tension.
+A structured 3-round debate where Pro and Contra must never agree. Each round escalates — opening statements, rebuttals, final arguments — then a Judge delivers the verdict. The agents are instructed to maintain their positions and counter every argument. This prevents the common AI pattern of politely converging and produces genuinely useful tension. Use `--personas` to cast specific figures into the roles.
 
 ```bash
 /libertee:debate "Remote work is superior to office work"
+/libertee:debate "Remote work is superior to office work" --personas "Sherlock Holmes, Dr. Watson"
 ```
 
 ---
@@ -106,10 +107,11 @@ Three phases, strictly separated. First: what actually happened? (facts only, no
 
 ![Troika Consulting](assets/card-troika.svg)
 
-A Client presents a problem, then two Consultants brainstorm openly while the Client listens in silence. Two rounds of back-and-forth between complementary experts who talk to each other, not to you. The power is in the listening: hearing experts discuss YOUR problem without the temptation to defend, explain, or redirect. By default, all three roles are AI agents — use `--join` to take a seat.
+A Client presents a problem, then two Consultants brainstorm openly while the Client listens in silence. Two rounds of back-and-forth between complementary experts who talk to each other, not to you. The power is in the listening: hearing experts discuss YOUR problem without the temptation to defend, explain, or redirect. By default, all three roles are AI agents — use `--join` to take a seat, or `--personas` to name specific figures as your consultants.
 
 ```bash
 /libertee:troika "We keep missing deadlines despite good planning"
+/libertee:troika "We can't decide on our tech stack" --personas "Linus Torvalds, Jeff Bezos"
 ```
 
 ---
@@ -118,10 +120,11 @@ A Client presents a problem, then two Consultants brainstorm openly while the Cl
 
 ![Wise Crowds](assets/card-wise-crowds.svg)
 
-4-5 diverse stakeholder perspectives, each seeing all previous contributions. The crowd's value isn't in consensus — it's in the spread. Where they converge reveals what's real. Where they diverge reveals what's interesting. What nobody mentions reveals the blind spot. The Facilitator's synthesis maps convergence, divergence, blind spots, and the signal in the noise.
+4-5 diverse stakeholder perspectives, each seeing all previous contributions. The crowd's value isn't in consensus — it's in the spread. Where they converge reveals what's real. Where they diverge reveals what's interesting. What nobody mentions reveals the blind spot. The Facilitator's synthesis maps convergence, divergence, blind spots, and the signal in the noise. Use `--personas` to populate the crowd with specific figures rather than auto-selected stakeholders.
 
 ```bash
 /libertee:wise-crowds "Should we open-source our internal tooling?"
+/libertee:wise-crowds "The team lacks trust" --personas "Machiavelli, Adam Smith, Brené Brown, Sun Tzu"
 ```
 
 ---
@@ -220,6 +223,27 @@ Take on a role yourself — bring your real emotions, domain knowledge, or convi
 /libertee:troika "Missed deadlines" --join client          # Your real problem, AI consults
 /libertee:wise-crowds "Open-source strategy" --join CTO    # Your seat at the table
 ```
+
+### Personas Mode
+
+Three methods support `--personas` to replace auto-selected perspectives with specific named figures — historical persons, fictional characters, or anyone with a recognizable voice and reasoning style:
+
+```bash
+/libertee:wise-crowds "The team lacks trust" --personas "Machiavelli, Adam Smith, Brené Brown, Sun Tzu"
+/libertee:troika "We can't decide on our tech stack" --personas "Linus Torvalds, Jeff Bezos"
+/libertee:debate "Remote work is better than office" --personas "Sherlock Holmes, Dr. Watson"
+```
+
+The method logic stays unchanged — personas shape the voice and reasoning style, not the structure. Holmes still argues pro, Watson contra; Torvalds and Bezos still run two rounds of consultation. The facilitator adds a 1-sentence framing for each persona before spawning, so the agents adopt the character with context, not just a name.
+
+Combine with `--join` for hybrid sessions:
+
+```bash
+/libertee:debate "AI will replace developers" --join pro --personas "Turing, Dijkstra"
+# You argue as Turing (Pro), AI plays Dijkstra (Contra)
+```
+
+Personas work for any figure with a recognizable perspective: scientists, philosophers, historical leaders, fictional characters, archetypes.
 
 ### Brief Mode
 

@@ -1,6 +1,6 @@
 ---
 description: "Troika Consulting (Liberating Structure) — two experts brainstorm your problem while you listen"
-argument-hint: "<problem or challenge> [--join client|1|2] [--tetralemma | --polarity] [--brief]"
+argument-hint: "<problem or challenge> [--join client|1|2] [--personas \"Expert1, Expert2\"] [--tetralemma | --polarity] [--brief]"
 allowed-tools: Read
 ---
 
@@ -27,9 +27,25 @@ When `--brief` is present, the session runs with the same roles and rounds, but 
 
 Brief mode cuts conversation, not depth. Same 2 rounds, same productive tension. Ideal for mobile or quick consultations.
 
+## Persona Mode (--personas flag)
+
+When `--personas` is present, the user has chosen the two Consultants.
+Parse the comma-separated list: first name = Consultant 1, second name = Consultant 2.
+
+Examples:
+- `--personas "Elon Musk, Warren Buffett"` → disruptive builder vs. patient capital allocator
+- `--personas "Sherlock Holmes, Dr. Watson"` → analytical deconstructor vs. pragmatic generalist
+
+When using custom personas:
+- Use the provided names as the expertise labels
+- Add a 1-sentence framing of their known approach
+  (e.g., "Elon Musk: first-principles thinker, tolerance for radical risk and speed")
+- Instruct the consultant agent: "You are Consultant [1|2], channeling the reasoning style and voice of [Persona Name]."
+- The Client role is unaffected by --personas
+
 ## Expertise Selection
 
-When the user presents their problem, **choose two complementary expert perspectives** based on the topic. These should create productive tension — not two people who agree.
+When the user presents their problem, **choose two complementary expert perspectives** based on the topic. If `--personas` is present, skip auto-selection — use the user's personas instead (see Persona Mode above). These should create productive tension — not two people who agree.
 
 Examples:
 - Technical problem → Systems Thinker + Pragmatic Engineer

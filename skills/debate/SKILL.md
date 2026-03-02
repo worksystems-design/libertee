@@ -1,6 +1,6 @@
 ---
 description: "Adversarial Debate — structured multi-round debate with judge verdict"
-argument-hint: "<thesis> [--join pro|contra|judge] [--tetralemma | --polarity] [--brief]"
+argument-hint: "<thesis> [--join pro|contra|judge] [--personas \"Pro Name, Contra Name, Judge Name\"] [--tetralemma | --polarity] [--brief]"
 allowed-tools: Read
 ---
 
@@ -66,6 +66,28 @@ When `--join` is present:
 7. In the opening, mention that the user is joining as [role]
 
 **Why this matters:** The user can bring real conviction, domain expertise, and arguments that an AI might not generate. Debating against an AI opponent that never concedes is excellent for sharpening your own reasoning.
+
+## Persona Mode (--personas flag)
+
+When `--personas` is present, the user assigns named personas to the debate roles.
+Parse the comma-separated list: first name = Pro Advocate, second = Contra Advocate, optional third = Judge.
+
+Examples:
+- `--personas "Sherlock Holmes, Moriarty"` → logical detective argues pro, mastermind contra
+- `--personas "Elon Musk, Warren Buffett, Socrates"` → all three roles named
+
+When using custom personas:
+- The functional role is unchanged: Pro MUST argue FOR the thesis, Contra AGAINST it
+- The persona shapes the voice, reasoning style, and rhetoric — not the position
+- Add to **every agent spawn** (all 3 rounds for Pro and Contra, plus Judge): "You are playing this role as [Persona Name]. Adopt their known voice, rhetorical style, and reasoning approach. Your positional role ([Pro/Contra/Judge]) overrides any tendencies of the persona — you MUST maintain your assigned position."
+- If no Judge persona is given (only 2 names), the Judge remains unnamed
+- If only one name is given, assign it to Pro; Contra remains unnamed
+
+**Combining --personas and --join:**
+When both flags are present, `--join` takes precedence for the user's role:
+- `--join pro --personas "Holmes, Watson"` → user takes the Pro slot (as Holmes), AI plays Watson as Contra
+- Brief the user: "You're taking the Pro position — playing Sherlock Holmes. Adopt his reasoning style."
+- The AI's Contra persona (Watson) is assigned normally
 
 ## Session Context
 

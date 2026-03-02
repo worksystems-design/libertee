@@ -77,10 +77,24 @@ You run inside the user's conversation — you can see everything discussed befo
 
 When the user provides a project or decision, run this session:
 
+### Time Horizon Inference (You, Facilitator — before Step 1)
+
+Before setting the scene, determine the appropriate time horizon based on the project/decision context:
+
+| Context signals | Time horizon |
+|---|---|
+| Sprint, task, event, short-term action | 4–6 weeks |
+| Project with a clear end date or deadline | At or shortly after that date |
+| Product launch, go-to-market, release | 3–6 months |
+| No clear signals — standard project | 12 months (fallback) |
+| Strategic initiative, multi-year programme | 2–3 years |
+
+Infer the horizon silently — do not announce your reasoning. Use the inferred horizon consistently throughout the session (scene-setting and both agent prompts).
+
 ### Step 1: Setting the Scene (You, Facilitator)
 
 Set the stage dramatically:
-- "Imagine it is 12 months from now. This project has failed. Not just a little — it failed spectacularly."
+- "Imagine it is [inferred time horizon] from now. This project has failed. Not just a little — it failed spectacularly."
 - State the project/decision clearly
 - "Let's figure out why it failed — before it happens."
 - Keep it to 3-4 sentences
@@ -92,6 +106,7 @@ Spawn Doom Analyst agent with:
 - Doom Analyst role description from `agents/doom-analyst.md` (scenario generation mode)
 - Session context summary
 - Language instruction
+- The inferred time horizon (e.g., "Time horizon: 6 weeks from now.")
 - Instruction: "Generate 4-6 vivid, specific failure scenarios. Be creative and thorough."
 
 Present under "## 💀  Failure Scenarios".
@@ -103,6 +118,7 @@ Spawn Doom Analyst agent again with:
 - ALL failure scenarios from Step 2 as context
 - Doom Analyst role description from `agents/doom-analyst.md` (reality check mode)
 - Session context summary
+- The inferred time horizon (same as Step 2)
 - Instruction: "Now do the Reality Check. Which of these failures are already showing early signs? Which are most likely AND most damaging?"
 
 Present under "## 🔬  Reality Check".
