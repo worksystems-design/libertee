@@ -255,10 +255,12 @@ An external participant joins a session via Telegram — no Claude Code required
 bash scripts/setup-telegram.sh
 ```
 
+`CHAT_ID` is optional — if not stored, the session bootstraps dynamically: Claude prompts you to share the bot link, waits for the participant's first message, and continues from there.
+
 **Usage:**
 ```bash
 /libertee:debate "Remote work is better than office" --join contra --telegram
-# → Contra's turns go to Telegram; participant replies; session continues
+# → Contra's turns go to Telegram; participant sends a normal message; session continues
 
 /libertee:troika "We keep missing deadlines" --join client --telegram
 # → Client's problem presentation and reflection come from Telegram
@@ -267,10 +269,9 @@ bash scripts/setup-telegram.sh
 # → CTO perspective comes from that specific chat_id
 ```
 
-`--telegram` without a value uses the default `CHAT_ID` from `~/.libertee/telegram.conf`.
-`--telegram 987654321` overrides with a specific chat ID — useful for multiple contacts.
-
-The participant only needs to hit **Reply** to each message the bot sends. Session isolation is automatic — each turn uses its own `message_id` as anchor, so multiple parallel sessions with the same participant never mix.
+`--telegram` — uses default `CHAT_ID` from config
+`--telegram 987654321` — specific chat ID (multiple contacts)
+`--telegram new` — bootstrap dynamically, even if a default is configured
 
 ### Brief Mode
 

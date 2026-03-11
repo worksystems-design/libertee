@@ -1,6 +1,6 @@
 ---
 description: "Adversarial Debate — structured multi-round debate with judge verdict"
-argument-hint: "<thesis> [--join pro|contra|judge] [--personas \"Pro Name, Contra Name, Judge Name\"] [--tetralemma | --polarity] [--brief] [--telegram [chat_id]]"
+argument-hint: "<thesis> [--join pro|contra|judge] [--personas \"Pro Name, Contra Name, Judge Name\"] [--tetralemma | --polarity] [--brief] [--telegram [chat_id|new]]"
 allowed-tools: Read, Bash
 ---
 
@@ -197,15 +197,17 @@ Briefly close the session:
 When `--telegram` is present alongside `--join`, the joined role's input comes from an external
 person via Telegram.
 
+Three modes: `--telegram` (default CHAT_ID from config), `--telegram 987654321` (specific chat_id), `--telegram new` (bootstrap dynamically — wait for next person to message the bot).
+
 When it's the external person's turn:
 1. Read `skills/shared/telegram.md` for the exact Bash commands
-2. Determine the CHAT_ID: use the value after `--telegram` if provided, else default from config
+2. Set `TELEGRAM_ARG` to the value after `--telegram` (empty string, a number, or "new")
 3. Get the baseline offset
 4. Send a Telegram message containing:
    - Role label and brief description (e.g., "You are the **Contra Advocate**")
    - Session context summary (thesis + rounds so far)
    - The specific question for this turn (e.g., "Make your opening argument against the thesis")
-   - Instruction: "👆 *Reply to THIS message* with your argument."
+   - Instruction: "Send your response to the bot."
 5. Poll for a reply to that specific message_id (5 min timeout)
 6. If timeout: tell the user in the terminal, offer to skip or extend
 7. Use the reply text as that role's contribution — continue the session normally
