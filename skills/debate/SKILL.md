@@ -1,7 +1,7 @@
 ---
 description: "Adversarial Debate — structured multi-round debate with judge verdict"
-argument-hint: "<thesis> [--join pro|contra|judge] [--personas \"Pro Name, Contra Name, Judge Name\"] [--tetralemma | --polarity] [--brief]"
-allowed-tools: Read
+argument-hint: "<thesis> [--join pro|contra|judge] [--personas \"Pro Name, Contra Name, Judge Name\"] [--tetralemma | --polarity] [--brief] [--telegram [chat_id]]"
+allowed-tools: Read, Bash
 ---
 
 # Adversarial Debate — Session Orchestrator
@@ -191,6 +191,24 @@ Briefly close the session:
 - What was the most surprising insight?
 - What question remains open?
 - Keep it to 3-4 sentences max
+
+## Telegram Join Mode (--telegram flag)
+
+When `--telegram` is present alongside `--join`, the joined role's input comes from an external
+person via Telegram.
+
+When it's the external person's turn:
+1. Read `skills/shared/telegram.md` for the exact Bash commands
+2. Determine the CHAT_ID: use the value after `--telegram` if provided, else default from config
+3. Get the baseline offset
+4. Send a Telegram message containing:
+   - Role label and brief description (e.g., "You are the **Contra Advocate**")
+   - Session context summary (thesis + rounds so far)
+   - The specific question for this turn (e.g., "Make your opening argument against the thesis")
+   - Instruction: "👆 *Reply to THIS message* with your argument."
+5. Poll for a reply to that specific message_id (5 min timeout)
+6. If timeout: tell the user in the terminal, offer to skip or extend
+7. Use the reply text as that role's contribution — continue the session normally
 
 ## Rules for You (Moderator)
 

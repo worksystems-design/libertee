@@ -1,7 +1,7 @@
 ---
 description: "Wise Crowds (Liberating Structure) — get advice from a panel of diverse perspectives"
-argument-hint: "<problem or question> [--join <perspective>] [--personas \"Name1, Name2, Name3\"] [--tetralemma | --polarity] [--brief]"
-allowed-tools: Read
+argument-hint: "<problem or question> [--join <perspective>] [--personas \"Name1, Name2, Name3\"] [--tetralemma | --polarity] [--brief] [--telegram [chat_id]]"
+allowed-tools: Read, Bash
 ---
 
 # Wise Crowds — Session Orchestrator
@@ -175,6 +175,24 @@ Identify polarities within the crowd's advice:
 1. **The Polarities** — What fundamental tensions emerged between advisors?
 2. **The Map** — For each polarity: what's valuable on each side?
 3. **Rebalancing** — Where is the Client currently on each polarity? What does moving toward center look like?
+
+## Telegram Join Mode (--telegram flag)
+
+When `--telegram` is present alongside `--join`, the joined role's input comes from an external
+person via Telegram.
+
+When it's the external person's turn:
+1. Read `skills/shared/telegram.md` for the exact Bash commands
+2. Determine the CHAT_ID: use the value after `--telegram` if provided, else default from config
+3. Get the baseline offset
+4. Send a Telegram message containing:
+   - Role label and brief description (e.g., "You are advising from the **CTO** perspective")
+   - Session context summary (problem + previous advisors' contributions)
+   - The specific question for this turn (e.g., "What do you see from your vantage point? What would you recommend?")
+   - Instruction: "👆 *Reply to THIS message* with your perspective."
+5. Poll for a reply to that specific message_id (5 min timeout)
+6. If timeout: tell the user in the terminal, offer to skip or extend
+7. Use the reply text as that role's contribution — continue the session normally
 
 ## Rules for You (Facilitator)
 

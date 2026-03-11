@@ -11,7 +11,7 @@ No code. No build steps. Just Markdown files that orchestrate multi-agent thinki
 - [The Methods](#the-methods) — 9 structured thinking methods
 - [Meta-Modules](#meta-modules) — 3 modules that think about the thinking
 - [Composition](#composition) — chain methods and meta-modules
-- [Features](#features) — logic modes, join mode, personas mode, brief mode
+- [Features](#features) — logic modes, join mode, personas mode, brief mode, external join via Telegram
 - [Installation](#installation) — GitHub or local
 - [How It Works](#how-it-works) — architecture overview
 - [Examples](#examples) — complete session transcripts
@@ -244,6 +244,33 @@ Combine with `--join` for hybrid sessions:
 ```
 
 Personas work for any figure with a recognizable perspective: scientists, philosophers, historical leaders, fictional characters, archetypes.
+
+### External Join via Telegram
+
+An external participant joins a session via Telegram — no Claude Code required on their end.
+
+**One-time setup (facilitator):**
+```bash
+# Create a bot first: Telegram → @BotFather → /newbot
+bash scripts/setup-telegram.sh
+```
+
+**Usage:**
+```bash
+/libertee:debate "Remote work is better than office" --join contra --telegram
+# → Contra's turns go to Telegram; participant replies; session continues
+
+/libertee:troika "We keep missing deadlines" --join client --telegram
+# → Client's problem presentation and reflection come from Telegram
+
+/libertee:wise-crowds "Should we open-source our tooling?" --join CTO --telegram 987654321
+# → CTO perspective comes from that specific chat_id
+```
+
+`--telegram` without a value uses the default `CHAT_ID` from `~/.libertee/telegram.conf`.
+`--telegram 987654321` overrides with a specific chat ID — useful for multiple contacts.
+
+The participant only needs to hit **Reply** to each message the bot sends. Session isolation is automatic — each turn uses its own `message_id` as anchor, so multiple parallel sessions with the same participant never mix.
 
 ### Brief Mode
 
