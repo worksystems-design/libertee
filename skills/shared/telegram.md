@@ -58,8 +58,7 @@ DEADLINE=$(($(date +%s) + 300))
 while [ -z "$REPLY" ] && [ $(date +%s) -lt $DEADLINE ]; do
   UPDATES=$(curl -s "https://api.telegram.org/bot$BOT_TOKEN/getUpdates?offset=$OFFSET&timeout=30")
   REPLY=$(echo "$UPDATES" | jq -r \
-    ".result[] | select(.message.chat.id == ($CHAT_ID | tonumber)) | .message.text" \
-    | head -1)
+    "[.result[] | select(.message.chat.id == ($CHAT_ID | tonumber)) | .message.text] | first // empty")
   LAST_ID=$(echo "$UPDATES" | jq -r '[.result[].update_id] | max // empty')
   [ -n "$LAST_ID" ] && OFFSET=$((LAST_ID + 1))
 done
