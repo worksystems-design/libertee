@@ -385,6 +385,42 @@ A single prompt like "analyze this from multiple angles" produces a polite, bala
 
 ---
 
+### /libertee:first-principles — First Principles Decomposition
+
+```
+┌─────────────────────────────────────┐
+│  ✋ Facilitator     ← reconstructs  │
+│       ┌──────────┐                  │
+│       │🤔        │                  │
+│       │Decomposer│  × 2 passes     │
+│       └──────────┘                  │
+│  🤔 why-chain ──▶ ⚖️ sort           │
+└─────────────────────────────────────┘
+```
+
+**What it does:** Takes a claim and asks "why?" recursively until reaching either bedrock (physical/logical necessity) or convention. Then sorts every assumption surfaced into necessary vs. inherited. Then rebuilds — showing what designs become possible when conventions fall away.
+
+**The agent:**
+- **Decomposer** — Runs twice. Pass 1 (Decompose): asks "why must this be true?" 3-4 levels deep, names hidden assumptions explicitly at each level, marks the terminus as bedrock, convention, or contradiction. Pass 2 (Separate): sorts every assumption into physical necessity, logical necessity, convention/path-dependency, or untested assumption. Marks contradictions.
+
+**The flow:** The Facilitator states the claim cleanly. The Decomposer runs the why-chain. Same agent, second pass: sorts the assumptions. The Facilitator reconstructs — what must stay, what can go, 2-3 alternative redesigns, and the single hidden move (the "necessity" everyone treated as bedrock that turns out to be droppable).
+
+**Best for:** Claims that "everyone knows are true" — the requirements, conventions, and "this is just how it is" beliefs that quietly shape what you build.
+
+**Use when:**
+- A requirement feels load-bearing but you can't articulate why
+- You suspect a "must-have" is actually inherited from a context that no longer applies
+- The team keeps designing around a constraint and you want to check if the constraint is real
+- You want to find the design space that's been invisible because a convention was treated as physics
+
+**Typical topics:** "We need a weekly status meeting" / "Software must have tests" / "Open offices are better for collaboration" / "We have to be on Slack" / "The product must support enterprise"
+
+**What makes it special:** Most "requirements" are inherited beliefs wearing the costume of necessity. First Principles is the disciplined process for taking them off. Unlike `/libertee:triz` (which asks "what are we doing wrong?"), this asks "what doesn't actually need to be there?" — and the reconstruction shows the unbuilt designs that become possible. With `--polarity`, conventions that look droppable are recognized as invisible polarity-management — preserved as tensions to balance, not rules to drop.
+
+**Example:** `/libertee:first-principles "We need a weekly status meeting"`
+
+---
+
 ## Meta-Modules
 
 Meta-Modules don't think about the content — they think about the thinking. They are designed to run **after** any method and read the session context to reflect on what shaped the result.
@@ -446,7 +482,7 @@ Several methods support alternative evaluation logic via flags. These change how
 | `--tetralemma` | **Tetralemma** (Varga von Kibed & Sparrer) | Evaluates 5 positions: the one, the other, both, neither, none of the above |
 | `--polarity` | **Polarity** (Barry Johnson) | Maps the tension instead of resolving it |
 
-Available in all 9 methods.
+Available in all 10 methods.
 
 ### When to use which logic
 
@@ -488,6 +524,7 @@ Every method supports `--join <role>` — you take on one of the agent roles you
 | `/libertee:w3` | `what`, `so-what`, `now-what` |
 | `/libertee:troika` | `client`, `1`, `2` |
 | `/libertee:wise-crowds` | any perspective (name it freely) |
+| `/libertee:first-principles` | `decompose` |
 
 ### Examples
 
@@ -501,6 +538,7 @@ Every method supports `--join <role>` — you take on one of the agent roles you
 /libertee:w3 "Last quarter" --join so-what
 /libertee:troika "Missed deadlines" --join client
 /libertee:wise-crowds "Open-source strategy" --join CTO
+/libertee:first-principles "Status meetings are necessary" --join decompose
 ```
 
 ---

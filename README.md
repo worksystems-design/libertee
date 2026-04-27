@@ -2,13 +2,13 @@
 
 Structured thinking methods as multi-agent sessions for Claude Code.
 
-Facilitation techniques from the real world — Six Thinking Hats, Adversarial Debate, Disney Creative Strategy, Pre-Mortem Analysis, Polarity Management, TRIZ, W³, Troika Consulting, and Wise Crowds — each powered by specialized AI agents that take on distinct roles and build on each other's insights. Plus three meta-cognitive modules that reflect on your thinking itself.
+Facilitation techniques from the real world — Six Thinking Hats, Adversarial Debate, Disney Creative Strategy, Pre-Mortem Analysis, Polarity Management, TRIZ, W³, Troika Consulting, Wise Crowds, and First Principles Decomposition — each powered by specialized AI agents that take on distinct roles and build on each other's insights. Plus three meta-cognitive modules that reflect on your thinking itself.
 
 No code. No build steps. Just Markdown files that orchestrate multi-agent thinking sessions.
 
 ## Table of Contents
 
-- [The Methods](#the-methods) — 9 structured thinking methods
+- [The Methods](#the-methods) — 10 structured thinking methods
 - [Meta-Modules](#meta-modules) — 3 modules that think about the thinking
 - [Composition](#composition) — chain methods and meta-modules
 - [Features](#features) — logic modes, join mode, personas mode, brief mode, external join via Telegram
@@ -125,6 +125,17 @@ A Client presents a problem, then two Consultants brainstorm openly while the Cl
 ```bash
 /libertee:wise-crowds "Should we open-source our internal tooling?"
 /libertee:wise-crowds "The team lacks trust" --personas "Machiavelli, Adam Smith, Brené Brown, Sun Tzu"
+```
+
+---
+
+### First Principles Decomposition
+
+Take a claim seriously enough to dismantle it. The Decomposer asks "why?" recursively, 3-4 levels deep, naming the hidden assumptions at each level. Then sorts every assumption into physical necessity, logical necessity, convention, or untested assumption. The Facilitator reconstructs — what must stay, what can go, and the alternative designs that become possible when the conventions fall away. Most "requirements" are inherited beliefs in the costume of necessity. This is the disciplined process for taking the costume off.
+
+```bash
+/libertee:first-principles "We need a weekly status meeting"
+/libertee:first-principles "Open offices are better for collaboration" --polarity
 ```
 
 ---
