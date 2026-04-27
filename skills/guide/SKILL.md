@@ -398,7 +398,7 @@ A single prompt like "analyze this from multiple angles" produces a polite, bala
 └─────────────────────────────────────┘
 ```
 
-**What it does:** Takes a claim and asks "why?" recursively until reaching either bedrock (physical/logical necessity) or convention. Then sorts every assumption surfaced into necessary vs. inherited. Then rebuilds — showing what designs become possible when conventions fall away.
+**What it does:** Takes a claim and asks "why?" recursively until reaching either bedrock (physical/logical necessity) or convention. Then sorts every assumption surfaced into necessary vs. inherited. Then rebuilds — showing what designs become possible when conventions fall away. The method has deep philosophical roots (Aristotle, Descartes); the modern engineering form is the same discipline applied to design and strategy.
 
 **The agent:**
 - **Decomposer** — Runs twice. Pass 1 (Decompose): asks "why must this be true?" 3-4 levels deep, names hidden assumptions explicitly at each level, marks the terminus as bedrock, convention, or contradiction. Pass 2 (Separate): sorts every assumption into physical necessity, logical necessity, convention/path-dependency, or untested assumption. Marks contradictions.

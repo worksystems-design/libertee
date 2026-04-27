@@ -133,7 +133,7 @@ A Client presents a problem, then two Consultants brainstorm openly while the Cl
 
 ![First Principles](assets/card-first-principles.svg)
 
-Take a claim seriously enough to dismantle it. The Decomposer asks "why?" recursively, 3-4 levels deep, naming the hidden assumptions at each level. Then sorts every assumption into physical necessity, logical necessity, convention, or untested assumption. The Facilitator reconstructs — what must stay, what can go, and the alternative designs that become possible when the conventions fall away. Most "requirements" are inherited beliefs in the costume of necessity. This is the disciplined process for taking the costume off.
+Take a claim seriously enough to dismantle it. The Decomposer asks "why?" recursively, 3-4 levels deep, naming the hidden assumptions at each level. Then sorts every assumption into physical necessity, logical necessity, convention, or untested assumption. The Facilitator reconstructs — what must stay, what can go, and the alternative designs that become possible when the conventions fall away. Most "requirements" are inherited beliefs in the costume of necessity. This is the disciplined process for taking the costume off. Roots in Aristotle and Descartes; the modern engineering form is the same method applied to design and strategy.
 
 ```bash
 /libertee:first-principles "We need a weekly status meeting"
@@ -172,7 +172,7 @@ Combinatorial generation as method, not as enumeration. Fritz Zwicky's 1948 tech
 
 ![Futures Cone](assets/card-futures-cone.svg)
 
-Map the future as a possibility space, not a single trajectory. The Scenario Cartographer generates four scenarios across the cone — probable (trends extrapolated), plausible (with shifts), possible (under different assumptions), preposterous (edge of imagination, but not impossible) — then identifies present-day indicators that show which futures are gaining ground, then evaluates which decisions are robust across all four zones. The discipline is taking the preposterous zone seriously and refusing to recommend a single bet. The output is a portfolio of choices that survive the space, plus the indicators worth watching, plus the brittle defaults the team is currently relying on.
+Map the future as a possibility space, not a single trajectory. Joseph Voros's 2003 Futures Cone (building on Hancock & Bezold) frames four zones radiating from the present. The Scenario Cartographer generates one scenario per zone — probable (trends extrapolated), plausible (with shifts), possible (under different assumptions), preposterous (edge of imagination, but not impossible) — then identifies present-day indicators that show which futures are gaining ground, then evaluates which decisions are robust across all four zones. The discipline is taking the preposterous zone seriously and refusing to recommend a single bet. The output is a portfolio of choices that survive the space, plus the indicators worth watching, plus the brittle defaults the team is currently relying on.
 
 ```bash
 /libertee:futures-cone "How will knowledge work look in 5 years?"
