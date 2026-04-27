@@ -51,6 +51,7 @@ Pass the relevant architecture to the agent so it can reason about structural li
 - **W³** — What → So What → Now What. Sees the past, less equipped for future uncertainty. Facts-first can anchor interpretation.
 - **Troika** — Client + 2 Consultants. Sees the presented problem, blind to what the client doesn't mention. 2 perspectives may not be enough.
 - **Wise Crowds** — 4-5 sequential advisors. Breadth over depth. Later advisors are anchored by earlier ones.
+- **First Principles** — Recursive why-chain + sort + reconstruction. Sees the claim's internal logic, blind to *missing axioms* (a true premise set isn't necessarily the right one — wrong premises produce wrong conclusions, undetectable by reasoning alone). Cannot detect *wrong abstraction level* — analysis can be coherent but not actionable. Produces hypothesis without reality validation; "action produces information" is the unbuilt next move.
 
 ## Session Flow
 

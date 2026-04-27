@@ -1,6 +1,6 @@
 {
   "name": "libertee",
-  "version": "0.10.3",
+  "version": "0.10.4",
   "description": "Structured thinking methods as multi-agent sessions — Six Thinking Hats, Adversarial Debate, Disney Method, Pre-Mortem, Polarity Management, TRIZ, W³, Troika Consulting, Wise Crowds, First Principles Decomposition — plus meta-cognitive modules (Bias Check, Frame Check, Method Check) that reflect on the thinking itself",
   "author": {
     "name": "Thomas Krause",

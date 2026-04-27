@@ -83,6 +83,7 @@ user-invocable: true
 - **Attribution matters.** Credit the method's creators. Add ® where trademarks exist.
 - **Agent model: sonnet.** Fast and cost-effective for focused perspectives.
 - **Test locally** with `claude --plugin-dir ./`
+- **Run the structural checklists** in `tests/` after any skill change. They check the contract (section headers, table structures, flag effects) — not content quality, which is the LLM's domain. See `tests/README.md` for the format.
 
 ## Questions?
 
