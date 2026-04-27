@@ -24,7 +24,7 @@ This module runs **after** another Libertee method. It reads the session context
 
 When `--brief` is present:
 
-- **Method Checkor:** **3 blind spots** instead of 3-4, each in **2 sentences**
+- **Method Checker:** **3 blind spots** instead of 3-4, each in **2 sentences**
 - **Your complementary method suggestion:** One method, one sentence why
 - **No preamble**
 
@@ -67,11 +67,11 @@ Do NOT output this step.
 
 ### Step 2: 🔬  Method Blind Spot Analysis
 
-Spawn Method Checkor agent with:
+Spawn Method Checker agent with:
 - The method used and its architecture (from the reference above)
 - The topic and conclusion
 - Summary of the key insights produced
-- Method Checkor role description from `agents/method-checkor.md`
+- Method Checker role description from `agents/method-checker.md`
 - Language instruction
 - Instruction: "Identify 3-4 structural blind spots of the method used. What could this method, by its very design, NOT see? Map each blind spot to something specific that may have been missed in this session."
 
@@ -79,7 +79,7 @@ Present under "## 🔬  Method Check".
 
 ### Step 3: The Complement (You, Facilitator)
 
-Based on the Method Checkor's analysis, suggest **one complementary method** that would cover the most important blind spot. Not a re-run — a different lens.
+Based on the Method Checker's analysis, suggest **one complementary method** that would cover the most important blind spot. Not a re-run — a different lens.
 
 Present under "## 🧩  The Complement".
 
