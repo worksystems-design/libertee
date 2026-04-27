@@ -2,13 +2,13 @@
 
 Structured thinking methods as multi-agent sessions for Claude Code.
 
-Facilitation techniques from the real world — Six Thinking Hats, Adversarial Debate, Disney Creative Strategy, Pre-Mortem Analysis, Polarity Management, TRIZ, W³, Troika Consulting, Wise Crowds, First Principles Decomposition, Analogical Transfer, and Morphological Box — each powered by specialized AI agents that take on distinct roles and build on each other's insights. Plus three meta-cognitive modules that reflect on your thinking itself.
+Facilitation techniques from the real world — Six Thinking Hats, Adversarial Debate, Disney Creative Strategy, Pre-Mortem Analysis, Polarity Management, TRIZ, W³, Troika Consulting, Wise Crowds, First Principles Decomposition, Analogical Transfer, Morphological Box, and Futures Cone — each powered by specialized AI agents that take on distinct roles and build on each other's insights. Plus three meta-cognitive modules that reflect on your thinking itself.
 
 No code. No build steps. Just Markdown files that orchestrate multi-agent thinking sessions.
 
 ## Table of Contents
 
-- [The Methods](#the-methods) — 12 structured thinking methods
+- [The Methods](#the-methods) — 13 structured thinking methods
 - [Meta-Modules](#meta-modules) — 3 modules that think about the thinking
 - [Composition](#composition) — chain methods and meta-modules
 - [Features](#features) — logic modes, join mode, personas mode, brief mode, external join via Telegram
@@ -164,6 +164,19 @@ Combinatorial generation as method, not as enumeration. Fritz Zwicky's 1948 tech
 ```bash
 /libertee:morphological-box "How could a new onboarding format look?"
 /libertee:morphological-box "How do we restructure our hiring process?" --polarity
+```
+
+---
+
+### Futures Cone
+
+![Futures Cone](assets/card-futures-cone.svg)
+
+Map the future as a possibility space, not a single trajectory. The Scenario Cartographer generates four scenarios across the cone — probable (trends extrapolated), plausible (with shifts), possible (under different assumptions), preposterous (edge of imagination, but not impossible) — then identifies present-day indicators that show which futures are gaining ground, then evaluates which decisions are robust across all four zones. The discipline is taking the preposterous zone seriously and refusing to recommend a single bet. The output is a portfolio of choices that survive the space, plus the indicators worth watching, plus the brittle defaults the team is currently relying on.
+
+```bash
+/libertee:futures-cone "How will knowledge work look in 5 years?"
+/libertee:futures-cone "Will our industry consolidate or fragment?" --polarity
 ```
 
 ---

@@ -496,6 +496,44 @@ A single prompt like "analyze this from multiple angles" produces a polite, bala
 
 ---
 
+### /libertee:futures-cone — Futures Cone (Voros 2003)
+
+```
+┌─────────────────────────────────────┐
+│  ✋ Facilitator     ← synthesizes   │
+│  ┌───┐  ──▶  ┌───┐  ──▶  ┌───┐    │
+│  │🔭 │       │📡 │       │🛡️ │    │
+│  │Sce│       │Ind│       │Rob│    │
+│  │nar│       │ica│       │ust│    │
+│  │ios│       │tor│       │   │    │
+│  │   │       │s  │       │   │    │
+│  └───┘       └───┘       └───┘    │
+└─────────────────────────────────────┘
+```
+
+**What it does:** Expands the future from a single trajectory into a possibility space — four zones from the present outward: probable (trends extrapolated), plausible (with shifts), possible (under different assumptions), preposterous (edge of imagination, but not impossible). Then identifies present-day indicators that show which scenarios are gaining ground. Then surfaces decisions that survive across all four zones, not just the comfortable middle.
+
+**The agent:**
+- **Scenario Cartographer** — Runs three times. Pass 1 (Scenarios): one concrete scenario per zone, each with name, 2-3 sentence description, and named driver. Takes the preposterous zone seriously — disruptive futures live there. Pass 2 (Indicators): per scenario, 2-3 observable present-day indicators (publication trends, regulatory filings, capability inflections — not vague sentiment). Distinguishes leading from confirming, already-present from not-yet-visible. Pass 3 (Robustness): which choices are tragfähig across all four zones, which are brittle and where, which leverage moves exploit the uncertainty itself.
+
+**The flow:** Facilitator infers and states the time horizon explicitly, then the Cartographer maps the cone, identifies indicators, and evaluates robustness. The Facilitator synthesizes a *portfolio* of decisions (not a single bet), names the highest-leverage indicators to watch, flags brittle defaults, and surfaces the hidden future — the scenario the team didn't draw because it felt too far.
+
+**Best for:** Strategic decisions under genuine uncertainty — especially ones where the team is anchored on a single forecast and you suspect the disruption is in a zone they're not looking at.
+
+**Use when:**
+- A decision needs to hold up across multiple plausible futures, not just the most likely
+- The team has converged on a single forecast and you suspect they've collapsed the real possibility space
+- You need to identify present-day indicators that would update a long-horizon strategy
+- You're evaluating optionality and reversibility, not commitment to a single path
+
+**Typical topics:** "How will knowledge work look in 5 years?" / "Where is our industry heading — consolidation or fragmentation?" / "Should we go async-only or stay hybrid?" / "How does AI change B2B sales?"
+
+**What makes it special:** Most futures work either forecasts a single trajectory or generates wild scenarios with no anchor in present reality. Futures Cone does both — it expands the space *and* tethers each zone to observable indicators. The discipline is taking the preposterous zone seriously and refusing to recommend a single decision when the analysis shows you need a portfolio. With `--polarity`, scenario zones are recognized as poles of an interdependent tension (e.g. consolidation ↔ fragmentation) — and the recommended stance holds the tension across the time horizon.
+
+**Example:** `/libertee:futures-cone "How will knowledge work look in 5 years?"`
+
+---
+
 ## Meta-Modules
 
 Meta-Modules don't think about the content — they think about the thinking. They are designed to run **after** any method and read the session context to reflect on what shaped the result.
@@ -557,7 +595,7 @@ Several methods support alternative evaluation logic via flags. These change how
 | `--tetralemma` | **Tetralemma** (Varga von Kibed & Sparrer) | Evaluates 5 positions: the one, the other, both, neither, none of the above |
 | `--polarity` | **Polarity** (Barry Johnson) | Maps the tension instead of resolving it |
 
-Available in all 12 methods.
+Available in all 13 methods.
 
 ### When to use which logic
 
@@ -602,6 +640,7 @@ Every method supports `--join <role>` — you take on one of the agent roles you
 | `/libertee:first-principles` | `decompose` |
 | `/libertee:analogical-transfer` | `abstract` |
 | `/libertee:morphological-box` | `dimensions` |
+| `/libertee:futures-cone` | `scenarios` |
 
 ### Examples
 
@@ -618,6 +657,7 @@ Every method supports `--join <role>` — you take on one of the agent roles you
 /libertee:first-principles "Status meetings are necessary" --join decompose
 /libertee:analogical-transfer "Knowledge transfer between teams" --join abstract
 /libertee:morphological-box "New onboarding format" --join dimensions
+/libertee:futures-cone "How will knowledge work look in 5 years?" --join scenarios
 ```
 
 ---
