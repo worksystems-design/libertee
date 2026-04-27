@@ -399,6 +399,10 @@ Complete example sessions (all in `--brief` mode) in English and German:
 - W³ — [English](examples/en/w3.md) · [Deutsch](examples/de/w3.md)
 - Troika Consulting — [English](examples/en/troika.md) · [Deutsch](examples/de/troika.md)
 - Wise Crowds — [English](examples/en/wise-crowds.md) · [Deutsch](examples/de/wise-crowds.md)
+- First Principles Decomposition — [English](examples/en/first-principles.md) · [Deutsch](examples/de/first-principles.md)
+- Analogical Transfer — [English](examples/en/analogical-transfer.md) · [Deutsch](examples/de/analogical-transfer.md)
+- Morphological Box — [English](examples/en/morphological-box.md) · [Deutsch](examples/de/morphological-box.md)
+- Futures Cone — [English](examples/en/futures-cone.md) · [Deutsch](examples/de/futures-cone.md)
 
 **Meta-Modules** (chained after a method):
 
