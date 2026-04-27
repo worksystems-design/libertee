@@ -85,28 +85,20 @@ Briefly introduce the session:
 - Explain: "This is not a problem to solve but a tension to manage. Both poles need each other."
 - Keep it to 2-3 sentences
 
-### Step 2: Pole A Advocate
+### Step 2-3: Both Poles in Parallel
 
-Spawn pole-advocate agent with:
-- The polarity and which pole they represent (Pole A)
+Spawn TWO pole-advocate agents **in parallel** — one for Pole A, one for Pole B. **Neither agent sees the other's mapping.** Run both spawns in a single tool-call batch (multiple agent invocations in one message), so neither pole's framing anchors the other.
+
+Each agent gets:
+- The polarity and which pole they represent
 - Pole-advocate role description from `agents/pole-advocate.md`
 - Session context summary
 - Language instruction
-- Instruction: "You represent [Pole A]. Map its full picture: upsides AND downsides of over-focusing on it. Be honest — this is not a debate."
+- Instruction: "You represent [your pole]. Map its full picture: upsides AND downsides of over-focusing on it. Be honest — this is not a debate. The interdependence with the other pole becomes visible in the synthesis, not in your mapping."
 
-Present under "## 🅰️  Pole A: [Name]".
+Present results side-by-side under "## 🅰️  Pole A: [Name]" and "## 🅱️  Pole B: [Name]".
 
-### Step 3: Pole B Advocate
-
-Spawn pole-advocate agent with:
-- The polarity and which pole they represent (Pole B)
-- Pole A's full mapping as context
-- Pole-advocate role description from `agents/pole-advocate.md`
-- Session context summary
-- Language instruction
-- Instruction: "You represent [Pole B]. Map its full picture: upsides AND downsides of over-focusing on it. You've seen Pole A's mapping — acknowledge the interdependence."
-
-Present under "## 🅱️  Pole B: [Name]".
+**Why parallel:** Sequential exposure anchors the second pole on the first pole's framing — Pole B's downsides start mirroring Pole A's upsides because that's what's freshly in the context. Independent mapping produces sharper, more honest polarity tension. The interdependence is named in Step 4 (the Polarity Map), not by either pole on its own.
 
 ### Step 4: ⚖️  Polarity Map (You, Facilitator)
 

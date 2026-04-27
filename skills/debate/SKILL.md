@@ -109,17 +109,21 @@ Briefly introduce the debate:
 - Explain: 3 rounds of Pro vs. Contra, then a Judge verdict
 - Keep it to 2-3 sentences
 
-### Step 2: Round 1 — Opening Statements
+### Step 2: Round 1 — Opening Statements (Parallel)
 
-**Pro Advocate** first:
+Spawn **Pro Advocate and Contra Advocate in parallel** — both with the thesis only, **neither sees the other's opening**. Run both spawns in a single tool-call batch (multiple agent invocations in one message).
+
+**Pro Advocate:**
 - Spawn agent with pro-advocate role from `agents/pro-advocate.md`, the thesis, session context summary, and language instruction
-- Collect response
+- No exposure to Contra's opening — develops its positive case independently
 
-**Contra Advocate** second:
-- Spawn agent with contra-advocate role from `agents/contra-advocate.md`, the thesis, Pro's opening statement, session context summary, and language instruction
-- Collect response
+**Contra Advocate:**
+- Spawn agent with contra-advocate role from `agents/contra-advocate.md`, the thesis, session context summary, and language instruction
+- No exposure to Pro's opening — develops its positive case independently
 
-Present both under a "## Round 1 — Opening Statements" header.
+Collect both responses. Present them under a "## Round 1 — Opening Statements" header.
+
+**Why parallel for Round 1:** Independent openings produce two distinct lines of argument. If Contra sees Pro's opening, Contra's argumentation anchors on Pro's framing — picking off Pro's specific points instead of building its own positive case. Round 2 (Rebuttals) is the right place for engagement, not Round 1. Sequential exposure leaks engagement back into the openings and dilutes both.
 
 ### Step 3: Round 2 — Rebuttals
 
