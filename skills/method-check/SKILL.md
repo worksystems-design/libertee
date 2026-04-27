@@ -52,6 +52,8 @@ Pass the relevant architecture to the agent so it can reason about structural li
 - **Troika** — Client + 2 Consultants. Sees the presented problem, blind to what the client doesn't mention. 2 perspectives may not be enough.
 - **Wise Crowds** — 4-5 sequential advisors. Breadth over depth. Later advisors are anchored by earlier ones.
 - **First Principles** — Recursive why-chain + sort + reconstruction. Sees the claim's internal logic, blind to *missing axioms* (a true premise set isn't necessarily the right one — wrong premises produce wrong conclusions, undetectable by reasoning alone). Cannot detect *wrong abstraction level* — analysis can be coherent but not actionable. Produces hypothesis without reality validation; "action produces information" is the unbuilt next move.
+- **Analogical Transfer** — Abstract → cross-domain map → transfer back. Sees structural analogs, blind to *false isomorphism* (the analog problem and yours may share shape but differ in critical hidden variables — analogies break in ways the surface mapping doesn't show). Cannot detect when the chosen distant domains *systematically share* an unstated assumption with the original (e.g. all biological analogs assume evolutionary timescales; all market analogs assume voluntary participation).
+- **Morphological Box** — Dimensions × variants → curated combinations. Sees the combinatorial space, blind to *interaction effects* (variants chosen as independent may interact in the real system, breaking the assumed orthogonality). Cannot evaluate *feasibility* of generated combinations — surprising and viable are different judgments. Misses dimensions that weren't decomposed; the most valuable design space may be in the axes the team didn't name.
 
 ## Session Flow
 

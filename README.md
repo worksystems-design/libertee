@@ -2,13 +2,13 @@
 
 Structured thinking methods as multi-agent sessions for Claude Code.
 
-Facilitation techniques from the real world — Six Thinking Hats, Adversarial Debate, Disney Creative Strategy, Pre-Mortem Analysis, Polarity Management, TRIZ, W³, Troika Consulting, Wise Crowds, and First Principles Decomposition — each powered by specialized AI agents that take on distinct roles and build on each other's insights. Plus three meta-cognitive modules that reflect on your thinking itself.
+Facilitation techniques from the real world — Six Thinking Hats, Adversarial Debate, Disney Creative Strategy, Pre-Mortem Analysis, Polarity Management, TRIZ, W³, Troika Consulting, Wise Crowds, First Principles Decomposition, Analogical Transfer, and Morphological Box — each powered by specialized AI agents that take on distinct roles and build on each other's insights. Plus three meta-cognitive modules that reflect on your thinking itself.
 
 No code. No build steps. Just Markdown files that orchestrate multi-agent thinking sessions.
 
 ## Table of Contents
 
-- [The Methods](#the-methods) — 10 structured thinking methods
+- [The Methods](#the-methods) — 12 structured thinking methods
 - [Meta-Modules](#meta-modules) — 3 modules that think about the thinking
 - [Composition](#composition) — chain methods and meta-modules
 - [Features](#features) — logic modes, join mode, personas mode, brief mode, external join via Telegram
@@ -131,11 +131,39 @@ A Client presents a problem, then two Consultants brainstorm openly while the Cl
 
 ### First Principles Decomposition
 
+![First Principles](assets/card-first-principles.svg)
+
 Take a claim seriously enough to dismantle it. The Decomposer asks "why?" recursively, 3-4 levels deep, naming the hidden assumptions at each level. Then sorts every assumption into physical necessity, logical necessity, convention, or untested assumption. The Facilitator reconstructs — what must stay, what can go, and the alternative designs that become possible when the conventions fall away. Most "requirements" are inherited beliefs in the costume of necessity. This is the disciplined process for taking the costume off.
 
 ```bash
 /libertee:first-principles "We need a weekly status meeting"
 /libertee:first-principles "Open offices are better for collaboration" --polarity
+```
+
+---
+
+### Analogical Transfer
+
+![Analogical Transfer](assets/card-analogical-transfer.svg)
+
+Most "creative" thinking stays inside the user's domain. Analogical Transfer is the only method that systematically forces the look outward. The Cross-Domain Analyst strips the problem to its abstract structural shape, finds at least 3 distant domains where that same shape has been solved (biology, military history, music, logistics, games, ecology), extracts the operating principles, and tests which transfer back. "Where the analogy breaks" is treated as part of the value, not a flaw. Inspired by Biomimicry and Koestler's Bisoziation.
+
+```bash
+/libertee:analogical-transfer "How do we improve knowledge transfer between teams?"
+/libertee:analogical-transfer "How do we coordinate across timezones without meetings?" --polarity
+```
+
+---
+
+### Morphological Box
+
+![Morphological Box](assets/card-morphological-box.svg)
+
+Combinatorial generation as method, not as enumeration. Fritz Zwicky's 1948 technique: decompose the design into 3-6 truly independent dimensions, list 3-5 variants per dimension (from conservative to provocative), then surface exactly 3 combinations from the full N×M×... space — most surprising, most plausible, uncomfortable but viable. The interesting designs are usually the ones nobody pitches. The "uncomfortable but viable" combination is the test: if the team can dismiss it without examining it, the method didn't push hard enough.
+
+```bash
+/libertee:morphological-box "How could a new onboarding format look?"
+/libertee:morphological-box "How do we restructure our hiring process?" --polarity
 ```
 
 ---

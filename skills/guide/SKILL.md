@@ -421,6 +421,81 @@ A single prompt like "analyze this from multiple angles" produces a polite, bala
 
 ---
 
+### /libertee:analogical-transfer — Analogical Transfer
+
+```
+┌─────────────────────────────────────┐
+│  ✋ Facilitator     ← synthesizes   │
+│  ┌───┐  ──▶  ┌───┐  ──▶  ┌───┐    │
+│  │🧬 │       │🌍 │       │🔄 │    │
+│  │Abs│       │Map│       │Tra│    │
+│  │tra│       │   │       │nsf│    │
+│  │ct │       │   │       │er │    │
+│  └───┘       └───┘       └───┘    │
+└─────────────────────────────────────┘
+```
+
+**What it does:** Strips the problem to its abstract structural shape, finds 3-5 distant domains where that same shape has been solved, extracts the operating principles, and tests whether they transfer back. The art is choosing genuinely far domains: same-industry analogs produce same-industry answers.
+
+**The agent:**
+- **Cross-Domain Analyst** — Runs three times. Pass 1 (Abstract): strips domain vocabulary, names the structural type (constraint / coordination / attention / throughput / distribution / trust / adaptation / replication). Pass 2 (Map): identifies at least 3 distant domains with the same structural problem; for each, the actual mechanism that works there and the operating principle. Pass 3 (Transfer): for each principle, evaluates direct/adapted/dropped and explicitly names where the analogy breaks.
+
+**The flow:** Facilitator frames the cross-domain move. The Cross-Domain Analyst abstracts, then maps to distant fields, then transfers back. The Facilitator synthesizes which principles to apply, which analogies broke, and the frame shift the cross-domain look produced.
+
+**Best for:** Problems where you've exhausted the in-domain playbook, or where the team is reaching for the same analogy patterns and getting same-shape answers.
+
+**Use when:**
+- You suspect there's a generative principle from outside your industry that applies
+- A design problem feels stuck because every variant is from the same family
+- You want to break out of "we tried that" by importing a mechanism from elsewhere
+- A challenge has a known shape (coordination, throughput, trust) that other fields have studied for centuries
+
+**Typical topics:** "How can we improve knowledge transfer between teams?" / "How do we scale async decisions?" / "How do we keep technical debt from accumulating?" / "How do we coordinate across timezones without meetings?"
+
+**What makes it special:** Inspired by Biomimicry (Janine Benyus) and Koestler's Bisoziation. Most methods deepen analysis within your domain. Analogical Transfer is the only one that systematically forces the look outward — and "where the analogy breaks" is treated as part of the value, not a flaw. With `--polarity`, principles are recognized as one pole of an interdependent tension in the analog domain — and the transfer adopts the *balance*, not just the principle.
+
+**Example:** `/libertee:analogical-transfer "How do we improve knowledge transfer between teams?"`
+
+---
+
+### /libertee:morphological-box — Morphological Box (Fritz Zwicky, 1948)
+
+```
+┌─────────────────────────────────────┐
+│  📦 Facilitator     ← curates       │
+│  ┌───┐  ──▶  ┌───┐  ──▶  ┌───┐    │
+│  │🧱 │       │🎲 │       │🔀 │    │
+│  │Dim│       │Var│       │Com│    │
+│  │ens│       │ian│       │bin│    │
+│  │ion│       │ts │       │ati│    │
+│  │s  │       │   │       │ons│    │
+│  └───┘       └───┘       └───┘    │
+└─────────────────────────────────────┘
+```
+
+**What it does:** Decomposes a design problem into 3-6 independent dimensions, generates 3-5 variants per dimension (from conservative to provocative), and surfaces 3 combinations from the full combinatorial space — most surprising, most plausible, uncomfortable but viable. The interesting designs are usually the ones nobody pitches.
+
+**The agent:**
+- **Dimensionalist** — Runs three times. Pass 1 (Dimensions): decomposes into independent axes with explicit dependency-flagging. Pass 2 (Variants): per dimension, conservative-to-provocative variants. Pass 3 (Combinations): exactly 3 combinations from the N×M×... space, each with explicit values and the trade-off it accepts. Does NOT enumerate all combinations.
+
+**The flow:** Facilitator frames the design space move. The Dimensionalist decomposes, generates variants, then curates 3 combinations. The Facilitator recommends one combination, names what the other two reveal, and surfaces any hidden dimension that emerged during the session.
+
+**Best for:** Design problems where the team keeps proposing variants of the same default — and you suspect the design space is bigger than the discussion has acknowledged.
+
+**Use when:**
+- A team is stuck recycling the same 2-3 design patterns
+- You're early enough in a design that the dimensions of choice aren't yet visible
+- You want to make an explicit case for an unbuilt design that "obvious" thinking would skip
+- You suspect the framing of the problem is forcing premature convergence
+
+**Typical topics:** "How could a new onboarding format look?" / "How do we restructure our hiring process?" / "How could a new strategy-workshop format look?" / "What are the design axes for our community model?"
+
+**What makes it special:** Combinatorial generation as method, not as enumeration. The discipline is in two places: keeping dimensions truly independent, and curating to 3 combinations rather than spreading across the whole space. The "uncomfortable but viable" combination is the test: if the team can dismiss it without examining it, the method didn't push hard enough. With `--polarity`, dimensions are recognized as polarities to be managed (e.g. structure ↔ flexibility) rather than choice axes — and the design holds the tension instead of picking a variant.
+
+**Example:** `/libertee:morphological-box "How could a new onboarding format look?"`
+
+---
+
 ## Meta-Modules
 
 Meta-Modules don't think about the content — they think about the thinking. They are designed to run **after** any method and read the session context to reflect on what shaped the result.
@@ -482,7 +557,7 @@ Several methods support alternative evaluation logic via flags. These change how
 | `--tetralemma` | **Tetralemma** (Varga von Kibed & Sparrer) | Evaluates 5 positions: the one, the other, both, neither, none of the above |
 | `--polarity` | **Polarity** (Barry Johnson) | Maps the tension instead of resolving it |
 
-Available in all 10 methods.
+Available in all 12 methods.
 
 ### When to use which logic
 
@@ -525,6 +600,8 @@ Every method supports `--join <role>` — you take on one of the agent roles you
 | `/libertee:troika` | `client`, `1`, `2` |
 | `/libertee:wise-crowds` | any perspective (name it freely) |
 | `/libertee:first-principles` | `decompose` |
+| `/libertee:analogical-transfer` | `abstract` |
+| `/libertee:morphological-box` | `dimensions` |
 
 ### Examples
 
@@ -539,6 +616,8 @@ Every method supports `--join <role>` — you take on one of the agent roles you
 /libertee:troika "Missed deadlines" --join client
 /libertee:wise-crowds "Open-source strategy" --join CTO
 /libertee:first-principles "Status meetings are necessary" --join decompose
+/libertee:analogical-transfer "Knowledge transfer between teams" --join abstract
+/libertee:morphological-box "New onboarding format" --join dimensions
 ```
 
 ---

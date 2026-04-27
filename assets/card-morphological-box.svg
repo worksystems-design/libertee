@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 165" font-family="Inter, -apple-system, system-ui, sans-serif">
+  <defs>
+    <style>
+      .agent-name { font-size: 11px; font-weight: 600; fill: white; }
+      .agent-role { font-size: 9px; fill: rgba(255,255,255,0.8); }
+      .facilitator-name { font-size: 11px; font-weight: 600; }
+      .facilitator-role { font-size: 9px; }
+      .arrow { stroke: #d1d5db; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="165" rx="12" fill="#f9fafb" stroke="#e5e7eb"/>
+
+  <text x="25" y="30" font-size="15" font-weight="700" fill="#1a1a2e">📦  Morphological Box (Zwicky)</text>
+
+  <!-- Facilitator -->
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="#a855f7" opacity="0.15"/>
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="65" y="72" text-anchor="middle" class="facilitator-name" fill="#7e22ce">📦 Facilitator</text>
+  <text x="65" y="86" text-anchor="middle" class="facilitator-role" fill="#7e22ce">Curates</text>
+
+  <line x1="115" y1="75" x2="145" y2="75" class="arrow"/>
+
+  <!-- Dimensions -->
+  <rect x="155" y="47" width="110" height="56" rx="8" fill="#a855f7"/>
+  <text x="210" y="72" text-anchor="middle" class="agent-name">🧱 Dimensions</text>
+  <text x="210" y="86" text-anchor="middle" class="agent-role">Independent axes</text>
+
+  <line x1="275" y1="75" x2="300" y2="75" class="arrow"/>
+
+  <!-- Variants -->
+  <rect x="310" y="47" width="110" height="56" rx="8" fill="#c084fc"/>
+  <text x="365" y="72" text-anchor="middle" class="agent-name">🎲 Variants</text>
+  <text x="365" y="86" text-anchor="middle" class="agent-role">3-5 per axis</text>
+
+  <line x1="430" y1="75" x2="455" y2="75" class="arrow"/>
+
+  <!-- Combinations -->
+  <rect x="465" y="47" width="110" height="56" rx="8" fill="#7e22ce"/>
+  <text x="520" y="72" text-anchor="middle" class="agent-name">🔀 Combinations</text>
+  <text x="520" y="86" text-anchor="middle" class="agent-role">3 surface, not all</text>
+
+  <!-- Footer -->
+  <text x="25" y="135" font-size="9" fill="#9ca3af" font-style="italic">"The interesting designs are usually the ones nobody pitches."</text>
+  <text x="25" y="150" font-size="9" fill="#9ca3af">Most surprising · Most plausible · Uncomfortable but viable</text>
+</svg>

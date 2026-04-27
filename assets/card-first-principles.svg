@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 165" font-family="Inter, -apple-system, system-ui, sans-serif">
+  <defs>
+    <style>
+      .agent-name { font-size: 11px; font-weight: 600; fill: white; }
+      .agent-role { font-size: 9px; fill: rgba(255,255,255,0.8); }
+      .facilitator-name { font-size: 11px; font-weight: 600; }
+      .facilitator-role { font-size: 9px; }
+      .arrow { stroke: #d1d5db; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#d1d5db"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="165" rx="12" fill="#f9fafb" stroke="#e5e7eb"/>
+
+  <text x="25" y="30" font-size="15" font-weight="700" fill="#1a1a2e">✋  First Principles Decomposition</text>
+
+  <!-- Facilitator -->
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="#475569" opacity="0.15"/>
+  <rect x="25" y="50" width="80" height="50" rx="8" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="65" y="72" text-anchor="middle" class="facilitator-name" fill="#334155">✋ Facilitator</text>
+  <text x="65" y="86" text-anchor="middle" class="facilitator-role" fill="#334155">Reconstructs</text>
+
+  <line x1="115" y1="75" x2="145" y2="75" class="arrow"/>
+
+  <!-- Decomposer (Decompose) -->
+  <rect x="155" y="47" width="160" height="56" rx="8" fill="#475569"/>
+  <text x="235" y="72" text-anchor="middle" class="agent-name">🤔 Decomposer</text>
+  <text x="235" y="86" text-anchor="middle" class="agent-role">Recursive why-chain</text>
+
+  <line x1="325" y1="75" x2="355" y2="75" class="arrow"/>
+
+  <!-- Decomposer (Separate) -->
+  <rect x="365" y="47" width="160" height="56" rx="8" fill="#1e293b"/>
+  <text x="445" y="72" text-anchor="middle" class="agent-name">⚖️ Decomposer</text>
+  <text x="445" y="86" text-anchor="middle" class="agent-role">Necessary vs. convention</text>
+
+  <!-- × 2 passes label -->
+  <text x="540" y="80" font-size="10" fill="#9ca3af">× 2 passes</text>
+
+  <!-- Footer -->
+  <text x="25" y="135" font-size="9" fill="#9ca3af" font-style="italic">"Why must this be true? — until we hit bedrock or convention."</text>
+  <text x="25" y="150" font-size="9" fill="#9ca3af">Decompose → Separate → Reconstruct unbuilt designs</text>
+</svg>
